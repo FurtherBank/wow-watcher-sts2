@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "Wah Gardienne !",
+  "WOWWATCHER-WAH_WATCHER.description": "Ajoutez à votre main une carte aléatoire permettant d’entrer en [gold]Colère[/gold], une carte aléatoire permettant d’entrer en [gold]Calme[/gold], ainsi que [gold]Précipitation[/gold] et [gold]Blasphème[/gold].{IfUpgraded:show:\nToutes les cartes ajoutées sont [gold]améliorées[/gold].|}"
+}

@@ -1,4 +1,4 @@
 {
-  "WOWWATCHER-WAH_WATCHER.title": "哇！观者",
-  "WOWWATCHER-WAH_WATCHER.description": "在手牌中生成随机的[gold]愤怒[/gold]牌、[gold]平静[/gold]牌、[gold]真言[/gold]牌各1张，以及[gold]猛虎下山[/gold]和[gold]渎神[/gold]。{IfUpgraded:show:\n生成的牌均已[gold]升级[/gold]。|}"
+  "WOWWATCHER-WAH_WATCHER.title": "哇 观者！",
+  "WOWWATCHER-WAH_WATCHER.description": "将一张随机的[gold]愤怒[/gold]、[gold]平静[/gold]牌以及[gold]猛虎下山[/gold]和[gold]渎神[/gold]加入手牌。{IfUpgraded:show:\n加入的牌均已[gold]升级[/gold]|}"
 }

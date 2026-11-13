@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "ワー ウォッチャー！",
+  "WOWWATCHER-WAH_WATCHER.description": "[gold]憤怒[/gold]に入れるランダムなカード1枚と[gold]平静[/gold]に入れるランダムなカード1枚、[gold]猪突猛進[/gold]、[gold]冒涜[/gold]を手札に加える。{IfUpgraded:show:\n加えるカードはすべて[gold]アップグレード[/gold]済み。|}"
+}

@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "Wah Watcher!",
+  "WOWWATCHER-WAH_WATCHER.description": "Aggiungi alla tua mano una carta casuale che permette di entrare in [gold]Furia[/gold], una carta casuale che permette di entrare in [gold]Calma[/gold], [gold]Assalto[/gold] e [gold]Blasfemia[/gold].{IfUpgraded:show:\nTutte le carte aggiunte sono [gold]Migliorate[/gold].|}"
+}

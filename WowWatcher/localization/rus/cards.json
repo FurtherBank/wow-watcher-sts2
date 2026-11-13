@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "Вах Созерцающая!",
+  "WOWWATCHER-WAH_WATCHER.description": "Добавьте в руку случайную карту для перехода в [gold]Гнев[/gold], случайную карту для перехода в [gold]Спокойствие[/gold], а также [gold]Наброситься[/gold] и [gold]Святотатство[/gold].{IfUpgraded:show:\nВсе добавленные карты [gold]улучшены[/gold].|}"
+}

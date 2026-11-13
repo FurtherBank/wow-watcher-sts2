@@ -1,0 +1,199 @@
+WowWatcher v0.1.4 — native game verification
+Game: macOS beta v0.113.0; BaseLib 3.4.8; Watcher 1.5.16.
+Combat test also includes original midori_black_card and RegentFemPortraits.
+Uses isolated game/save copies; no player progress modified.
+Exit code: 0.
+
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] stance pools exclude starters and exhaust
+[WOW PASS] three cards in each stance pool
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] large preview uses native fallback
+[WOW PASS] large portrait valid before room transition
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] upgrade description 0
+[WOW PASS] card displayed
+[WOW PASS] capture 0
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] four generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] no mantra card 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] upgrade description 1
+[WOW PASS] card displayed
+[WOW PASS] capture 1
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] four generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] no mantra card 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] upgrade description 2
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] four generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] no mantra card 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] locale title zhs
+[WOW PASS] locale formatted zhs
+[WOW PASS] locale screenshot zhs
+[WOW LOCALE] zhs 哇 观者！ 将一张随机的[gold]愤怒[/gold]、[gold]平静[/gold]牌以及[gold]猛虎下山[/gold]和[gold]渎神[/gold]加入手牌。 / 加入的牌均已[gold]升级[/gold] / [gold]消耗[/gold]。
+[WOW PASS] locale title zht
+[WOW PASS] locale formatted zht
+[WOW PASS] locale screenshot zht
+[WOW LOCALE] zht 哇 觀者！ 將隨機的[gold]憤怒[/gold]牌、[gold]平靜[/gold]牌各1張以及[gold]猛虎下山[/gold]和[gold]瀆神[/gold]加入手牌。 / 加入的牌均已[gold]升級[/gold] / [gold]消耗[/gold]。
+[WOW PASS] locale title eng
+[WOW PASS] locale formatted eng
+[WOW PASS] locale screenshot eng
+[WOW LOCALE] eng Wah Watcher! Add a random card for entering [gold]Wrath[/gold], a random card for entering [gold]Calm[/gold], [gold]Rushdown[/gold], and [gold]Blasphemy[/gold] to your hand. / All added cards are [gold]Upgraded[/gold]. / [gold]Exhaust[/gold].
+[WOW PASS] locale title jpn
+[WOW PASS] locale formatted jpn
+[WOW PASS] locale screenshot jpn
+[WOW LOCALE] jpn ワー ウォッチャー！ [gold]憤怒[/gold]に入れるランダムなカード1枚と[gold]平静[/gold]に入れるランダムなカード1枚、[gold]猪突猛進[/gold]、[gold]冒涜[/gold]を手札に加える。 / 加えるカードはすべて[gold]アップグレード[/gold]済み。 / [gold]廃棄[/gold]。
+[WOW PASS] locale title kor
+[WOW PASS] locale formatted kor
+[WOW PASS] locale screenshot kor
+[WOW LOCALE] kor 와 와쳐! [gold]진노[/gold]에 들어갈 수 있는 무작위 카드 1장과 [gold]명상[/gold]에 들어갈 수 있는 무작위 카드 1장, [gold]추월[/gold], [gold]신성 모독[/gold]을 손에 넣습니다. / 추가되는 카드는 모두 [gold]강화[/gold]되어 있습니다. / [gold]소멸[/gold].
+[WOW PASS] locale title deu
+[WOW PASS] locale formatted deu
+[WOW PASS] locale screenshot deu
+[WOW LOCALE] deu Wa Seherin! Füge deiner Hand je eine zufällige Karte zum Annehmen von [gold]Zorn[/gold] und [gold]Ruhe[/gold] sowie [gold]Ansturm[/gold] und [gold]Blasphemie[/gold] hinzu. / Alle hinzugefügten Karten sind [gold]verbessert[/gold]. / [gold]Erschöpft[/gold].
+[WOW PASS] locale title fra
+[WOW PASS] locale formatted fra
+[WOW PASS] locale screenshot fra
+[WOW LOCALE] fra Wah Gardienne ! Ajoutez à votre main une carte aléatoire permettant d’entrer en [gold]Colère[/gold], une carte aléatoire permettant d’entrer en [gold]Calme[/gold], ainsi que [gold]Précipitation[/gold] et [gold]Blasphème[/gold]. / Toutes les cartes ajoutées sont [gold]améliorées[/gold]. / [gold]Épuisement[/gold].
+[WOW PASS] locale title ita
+[WOW PASS] locale formatted ita
+[WOW PASS] locale screenshot ita
+[WOW LOCALE] ita Wah Watcher! Aggiungi alla tua mano una carta casuale che permette di entrare in [gold]Furia[/gold], una carta casuale che permette di entrare in [gold]Calma[/gold], [gold]Assalto[/gold] e [gold]Blasfemia[/gold]. / Tutte le carte aggiunte sono [gold]Migliorate[/gold]. / [gold]Esaurimento[/gold].
+[WOW PASS] locale title pol
+[WOW PASS] locale formatted pol
+[WOW PASS] locale screenshot pol
+[WOW LOCALE] pol Wah Obserwatorka! Dodaj do ręki losową kartę pozwalającą przyjąć [gold]postawę Gniewu[/gold], losową kartę pozwalającą przyjąć [gold]postawę Spokoju[/gold], [gold]Blitzkrieg[/gold] oraz [gold]Bluźnierstwo[/gold]. / Wszystkie dodane karty są [gold]Ulepszone[/gold]. / [gold]Wyczerpanie[/gold].
+[WOW PASS] locale title rus
+[WOW PASS] locale formatted rus
+[WOW PASS] locale screenshot rus
+[WOW LOCALE] rus Вах Созерцающая! Добавьте в руку случайную карту для перехода в [gold]Гнев[/gold], случайную карту для перехода в [gold]Спокойствие[/gold], а также [gold]Наброситься[/gold] и [gold]Святотатство[/gold]. / Все добавленные карты [gold]улучшены[/gold]. / [gold]Сжигается[/gold].
+[WOW PASS] ALL CHECKS PASSED
+
+Fresh native NCard creation after locale changes; exit code 0:
+[LOCALE FRESH PASS] zhs 哇 观者！ normal + upgraded
+[LOCALE FRESH PASS] zht 哇 觀者！ normal + upgraded
+[LOCALE FRESH PASS] eng Wah Watcher! normal + upgraded
+[LOCALE FRESH PASS] jpn ワー ウォッチャー！ normal + upgraded
+[LOCALE FRESH PASS] kor 와 와쳐! normal + upgraded
+[LOCALE FRESH PASS] deu Wa Seherin! normal + upgraded
+[LOCALE FRESH PASS] fra Wah Gardienne ! normal + upgraded
+[LOCALE FRESH PASS] ita Wah Watcher! normal + upgraded
+[LOCALE FRESH PASS] pol Wah Obserwatorka! normal + upgraded
+[LOCALE FRESH PASS] rus Вах Созерцающая! normal + upgraded
+
+Portrait lifecycle regression with original midori_black_card; exit code 0:
+[PORTRAIT] assembly=WowWatcher, Version=0.1.4.0, Culture=neutral, PublicKeyToken=null HasPortrait=False CustomPortraitPath=
+[PORTRAIT] PASS third-party assembly loaded
+[PORTRAIT] PASS real NCard ready 0
+[PORTRAIT] PASS normal and big dimensions 0
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 0
+[PORTRAIT] PASS lifecycle 0
+[PORTRAIT] PASS real NCard ready 1
+[PORTRAIT] PASS normal and big dimensions 1
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 1
+[PORTRAIT] PASS lifecycle 1
+[PORTRAIT] PASS real NCard ready 2
+[PORTRAIT] PASS normal and big dimensions 2
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 2
+[PORTRAIT] PASS lifecycle 2
+[PORTRAIT] PASS real NCard ready 3
+[PORTRAIT] PASS normal and big dimensions 3
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 3
+[PORTRAIT] PASS lifecycle 3
+[PORTRAIT] PASS real NCard ready 4
+[PORTRAIT] PASS normal and big dimensions 4
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 4
+[PORTRAIT] PASS lifecycle 4
+[PORTRAIT] PASS real NCard ready 5
+[PORTRAIT] PASS normal and big dimensions 5
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 5
+[PORTRAIT] PASS lifecycle 5
+[PORTRAIT] PASS real NCard ready 6
+[PORTRAIT] PASS normal and big dimensions 6
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 6
+[PORTRAIT] PASS lifecycle 6
+[PORTRAIT] PASS real NCard ready 7
+[PORTRAIT] PASS normal and big dimensions 7
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 7
+[PORTRAIT] PASS lifecycle 7
+[PORTRAIT] PASS real NCard ready 8
+[PORTRAIT] PASS normal and big dimensions 8
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 8
+[PORTRAIT] PASS lifecycle 8
+[PORTRAIT] PASS real NCard ready 9
+[PORTRAIT] PASS normal and big dimensions 9
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 9
+[PORTRAIT] PASS lifecycle 9
+[PORTRAIT] PASS real NCard ready 10
+[PORTRAIT] PASS normal and big dimensions 10
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 10
+[PORTRAIT] PASS lifecycle 10
+[PORTRAIT] PASS real NCard ready 11
+[PORTRAIT] PASS normal and big dimensions 11
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 11
+[PORTRAIT] PASS lifecycle 11
+[PORTRAIT] PASS COMPLETE 12 lifecycle boundaries
+
+Native engine emitted an Invalid Task ID message during startup and renderer/resource cleanup messages at exit. All scenario assertions above completed successfully.
+Locale checks cover title/description loading, upgrade formatting and native card creation; translated copy was also reviewed against Watcher localization terms.

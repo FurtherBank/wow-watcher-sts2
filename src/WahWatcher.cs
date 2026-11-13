@@ -32,8 +32,6 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
         [ModelDb.Card<Indignation>(), ModelDb.Card<Tantrum>(), ModelDb.Card<SimmeringFury>()];
     public static IReadOnlyList<CardModel> CalmCards =>
         [ModelDb.Card<FearNoEvil>(), ModelDb.Card<InnerPeace>(), ModelDb.Card<Meditate>()];
-    public static IReadOnlyList<CardModel> MantraCards =>
-        [ModelDb.Card<Prostrate>(), ModelDb.Card<Pray>(), ModelDb.Card<Worship>(), ModelDb.Card<Devotion>()];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -42,7 +40,7 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
         var rng = Owner.RunState.Rng.CombatCardGeneration;
         CardModel[] templates =
         [WrathCards[rng.NextInt(WrathCards.Count)], CalmCards[rng.NextInt(CalmCards.Count)],
-         MantraCards[rng.NextInt(MantraCards.Count)], ModelDb.Card<Rushdown>(), ModelDb.Card<Blasphemy>()];
+         ModelDb.Card<Rushdown>(), ModelDb.Card<Blasphemy>()];
         var cards = templates.Select(template => combat.CreateCard(template, Owner)).ToArray();
         foreach (var card in cards)
             if (IsUpgraded) CardCmd.Upgrade(card);

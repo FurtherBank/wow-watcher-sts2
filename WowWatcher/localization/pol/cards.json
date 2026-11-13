@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "Wah Obserwatorka!",
+  "WOWWATCHER-WAH_WATCHER.description": "Dodaj do ręki losową kartę pozwalającą przyjąć [gold]postawę Gniewu[/gold], losową kartę pozwalającą przyjąć [gold]postawę Spokoju[/gold], [gold]Blitzkrieg[/gold] oraz [gold]Bluźnierstwo[/gold].{IfUpgraded:show:\nWszystkie dodane karty są [gold]Ulepszone[/gold].|}"
+}
