@@ -1,0 +1,93 @@
+lamali variant v0.1.5. Native macOS beta v0.113.0, isolated game/save. Exit 0.
+Mask artwork loaded and screenshots inspected; mouth curve removed.
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] stance pools exclude starters and exhaust
+[WOW PASS] three cards in each stance pool
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] large preview uses native fallback
+[WOW PASS] large portrait valid before room transition
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] upgrade description 0
+[WOW PASS] card displayed
+[WOW PASS] capture 0
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] four generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] no mantra card 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] upgrade description 1
+[WOW PASS] card displayed
+[WOW PASS] capture 1
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] four generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] no mantra card 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] upgrade description 2
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] four generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] no mantra card 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] locale title zhs
+[WOW PASS] locale formatted zhs
+[WOW PASS] locale screenshot zhs
+[WOW PASS] locale title zht
+[WOW PASS] locale formatted zht
+[WOW PASS] locale screenshot zht
+[WOW PASS] locale title eng
+[WOW PASS] locale formatted eng
+[WOW PASS] locale screenshot eng
+[WOW PASS] locale title jpn
+[WOW PASS] locale formatted jpn
+[WOW PASS] locale screenshot jpn
+[WOW PASS] locale title kor
+[WOW PASS] locale formatted kor
+[WOW PASS] locale screenshot kor
+[WOW PASS] locale title deu
+[WOW PASS] locale formatted deu
+[WOW PASS] locale screenshot deu
+[WOW PASS] locale title fra
+[WOW PASS] locale formatted fra
+[WOW PASS] locale screenshot fra
+[WOW PASS] locale title ita
+[WOW PASS] locale formatted ita
+[WOW PASS] locale screenshot ita
+[WOW PASS] locale title pol
+[WOW PASS] locale formatted pol
+[WOW PASS] locale screenshot pol
+[WOW PASS] locale title rus
+[WOW PASS] locale formatted rus
+[WOW PASS] locale screenshot rus
+[WOW PASS] ALL CHECKS PASSED

@@ -6,6 +6,8 @@
 
 ## 本次更新
 
+v0.1.5 修正面罩卡图，移除面罩上不应显示的嘴部弧线。
+
 v0.1.4 中文名改为「哇 观者！」（哇后保留一个空格），补齐十种语言。移除真言随机牌，调整卡牌描述，并重绘红、蓝、紫三色光下观者闪亮登场的卡图。保留 v0.1.3 的贴图生命周期修复。
 
 ## 卡图兼容性
@@ -34,7 +36,7 @@ v0.1.3 修复查看卡牌大图后切换房间、再次抽到此牌时可能发�
 
 ## 下载与安装
 
-从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.4.zip`。
+从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.5.zip`。
 
 使用前请切换到游戏测试分支，并安装、启用以下前置 Mod。
 
@@ -77,7 +79,7 @@ macOS 默认使用当前用户的标准 Steam 安装目录。其他位置或平�
 
 若 .NET 不在 PATH 中，可设置 `DOTNET_BIN` 为本机 `dotnet` 可执行文件的路径。Windows 可使用 Git Bash 或 WSL 执行脚本，并安装相应环境下可用的 .NET 和 Python。
 
-输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.4.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
+输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.5.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
 
 ## 卡图与资源
 
