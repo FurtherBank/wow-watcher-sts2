@@ -4,6 +4,10 @@
 
 ![哇！观者专属卡图](WowWatcher/images/wah_watcher.png)
 
+## 最新修复
+
+v0.1.3 修复查看卡牌大图后切换房间、再次抽到此牌时可能发生的卡死。已与 `midori_black_card` 原版一起复现旧版故障，并验证修复版跨 12 次贴图清理后仍可正常显示；另已运行带该卡面 Mod 和 RegentFemPortraits 的战斗抽牌、出牌验证。结果见 [贴图生命周期回归](verification/portrait-lifecycle-results.txt)。更新后需完全退出并重新启动游戏，当前进程中已失效的贴图缓存无法通过替换文件恢复。
+
 ## 卡牌效果
 
 **哇！观者** · 稀有 · 0 费技能 · 哇 · 消耗
@@ -28,7 +32,7 @@
 
 ## 下载与安装
 
-从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.2.zip`。
+从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.3.zip`。
 
 使用前请切换到游戏测试分支，并安装、启用以下前置 Mod。
 
@@ -71,7 +75,7 @@ macOS 默认使用当前用户的标准 Steam 安装目录。其他位置或平�
 
 若 .NET 不在 PATH 中，可设置 `DOTNET_BIN` 为本机 `dotnet` 可执行文件的路径。Windows 可使用 Git Bash 或 WSL 执行脚本，并安装相应环境下可用的 .NET 和 Python。
 
-输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.2.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
+输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.3.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
 
 ## 卡图与资源
 

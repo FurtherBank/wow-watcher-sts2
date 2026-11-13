@@ -1,0 +1,147 @@
+Portrait lifecycle regression / STS2 beta v0.113.0
+BaseLib 3.4.8 / Watcher 1.5.16 / original midori_black_card
+Same fixture; old version exits 1, fixed version exits 0.
+
+OLD 0.1.2
+[PORTRAIT] assembly=WowWatcher, Version=0.1.2.0, Culture=neutral, PublicKeyToken=null HasPortrait=True CustomPortraitPath=res://WowWatcher/images/wah_watcher.res
+[PORTRAIT] PASS third-party assembly loaded
+[PORTRAIT] PASS real NCard ready 0
+[PORTRAIT] PASS normal and big dimensions 0
+[PORTRAIT] sameWrapper=True missed=2
+[PORTRAIT] post-unload originalValid=False
+[PORTRAIT] FAIL stage=loop 0 update-second System.ObjectDisposedException: Cannot access a disposed object.
+
+FIXED 0.1.3
+[PORTRAIT] assembly=WowWatcher, Version=0.1.3.0, Culture=neutral, PublicKeyToken=null HasPortrait=False CustomPortraitPath=
+[PORTRAIT] PASS third-party assembly loaded
+[PORTRAIT] PASS real NCard ready 0
+[PORTRAIT] PASS normal and big dimensions 0
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 0
+[PORTRAIT] PASS lifecycle 0
+[PORTRAIT] PASS real NCard ready 1
+[PORTRAIT] PASS normal and big dimensions 1
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 1
+[PORTRAIT] PASS lifecycle 1
+[PORTRAIT] PASS real NCard ready 2
+[PORTRAIT] PASS normal and big dimensions 2
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 2
+[PORTRAIT] PASS lifecycle 2
+[PORTRAIT] PASS real NCard ready 3
+[PORTRAIT] PASS normal and big dimensions 3
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 3
+[PORTRAIT] PASS lifecycle 3
+[PORTRAIT] PASS real NCard ready 4
+[PORTRAIT] PASS normal and big dimensions 4
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 4
+[PORTRAIT] PASS lifecycle 4
+[PORTRAIT] PASS real NCard ready 5
+[PORTRAIT] PASS normal and big dimensions 5
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 5
+[PORTRAIT] PASS lifecycle 5
+[PORTRAIT] PASS real NCard ready 6
+[PORTRAIT] PASS normal and big dimensions 6
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 6
+[PORTRAIT] PASS lifecycle 6
+[PORTRAIT] PASS real NCard ready 7
+[PORTRAIT] PASS normal and big dimensions 7
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 7
+[PORTRAIT] PASS lifecycle 7
+[PORTRAIT] PASS real NCard ready 8
+[PORTRAIT] PASS normal and big dimensions 8
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 8
+[PORTRAIT] PASS lifecycle 8
+[PORTRAIT] PASS real NCard ready 9
+[PORTRAIT] PASS normal and big dimensions 9
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 9
+[PORTRAIT] PASS lifecycle 9
+[PORTRAIT] PASS real NCard ready 10
+[PORTRAIT] PASS normal and big dimensions 10
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 10
+[PORTRAIT] PASS lifecycle 10
+[PORTRAIT] PASS real NCard ready 11
+[PORTRAIT] PASS normal and big dimensions 11
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 11
+[PORTRAIT] PASS lifecycle 11
+[PORTRAIT] PASS COMPLETE 12 lifecycle boundaries
+
+Full combat compatibility run additionally loaded RegentFemPortraits and midori_black_card:
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] stance pools exclude starters and exhaust
+[WOW PASS] three cards in each stance pool
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] large preview uses native fallback
+[WOW PASS] large portrait valid before room transition
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] five generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] mantra choice 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] five generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] mantra choice 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] five generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] mantra choice 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] ALL CHECKS PASSED

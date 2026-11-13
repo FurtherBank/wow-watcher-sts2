@@ -1,0 +1,31 @@
+using Godot;
+using HarmonyLib;
+using MegaCrit.Sts2.Core.Assets;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Nodes.Cards;
+using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
+[ModInitializer(nameof(Initialize))]
+public static class Fixture {
+ static bool started;static string stage="init";static SceneTree Tree=>(SceneTree)Engine.GetMainLoop();
+ public static void Initialize()=>new Harmony("PortraitRegression").Patch(AccessTools.Method(typeof(NMainMenu),"_Ready"),postfix:new HarmonyMethod(typeof(Fixture),nameof(Ready)));
+ static void Ready(){if(started)return;started=true;Callable.From(()=>{_=Go();}).CallDeferred();}
+ static void Log(string m)=>GD.Print("[PORTRAIT] "+m);
+ static async Task Frame(){await Tree.ToSignal(Tree,SceneTree.SignalName.ProcessFrame);await Tree.ToSignal(Tree,SceneTree.SignalName.ProcessFrame);}
+ static void Check(bool p,string m){if(!p)throw new Exception(m);Log("PASS "+m);}
+ static async Task Go(){try{
+ await Task.Delay(1000);await Frame();
+ var card=ModelDb.Card<WowWatcher.WahWatcher>();Log("assembly="+typeof(WowWatcher.WahWatcher).Assembly.FullName+" HasPortrait="+card.HasPortrait+" CustomPortraitPath="+card.CustomPortraitPath);
+ Check(AppDomain.CurrentDomain.GetAssemblies().Any(a=>a.GetType("com_demo_midori_black_card.PortraitPatch")!=null),"third-party assembly loaded");
+ for(int i=0;i<12;i++){
+ stage="loop "+i+" create-first";var node=NCard.Create(card)!;Tree.Root.AddChild(node);node.UpdateVisuals(PileType.None,CardPreviewMode.Normal);Check(node.IsNodeReady(),"real NCard ready "+i);
+ stage="loop "+i+" bigportrait";var normal=card.Portrait;var big=card.BigPortrait;Check(normal.GetWidth()>0&&big.GetWidth()>0,"normal and big dimensions "+i);Log("sameWrapper="+ReferenceEquals(normal,big)+" missed="+PreloadManager.Cache.MissedCacheAssetCount);
+ node.QueueFree();await Frame();
+ stage="loop "+i+" unload";PreloadManager.Cache.UnloadMissedCacheAssets();await Frame();Log("post-unload originalValid="+GodotObject.IsInstanceValid(normal));
+ stage="loop "+i+" create-second";var second=NCard.Create(card)!;Tree.Root.AddChild(second);
+ stage="loop "+i+" update-second";second.UpdateVisuals(PileType.None,CardPreviewMode.Normal);Check(card.Portrait.GetWidth()>0&&card.BigPortrait.GetWidth()>0,"after-boundary normal and big valid "+i);second.QueueFree();await Frame();Log("PASS lifecycle "+i);
+ }
+ Log("PASS COMPLETE 12 lifecycle boundaries");Tree.Quit();
+ }catch(Exception e){Log("FAIL stage="+stage+" "+e);Tree.Quit(1);}}
+}

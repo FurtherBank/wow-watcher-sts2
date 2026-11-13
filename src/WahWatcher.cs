@@ -18,9 +18,10 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
 {
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Wah];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    // Reuse this portrait for large previews. Registering the same texture as
+    // CustomPortraitPath lets the native large-art cache dispose the shared image.
     public override string PortraitPath => "res://WowWatcher/images/wah_watcher.res";
     public override string BetaPortraitPath => PortraitPath;
-    public override string? CustomPortraitPath => PortraitPath;
     protected override IEnumerable<string> ExtraRunAssetPaths => NWahVfx.AssetPaths;
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
         [HoverTipFactory.FromCard<Rushdown>(IsUpgraded), HoverTipFactory.FromCard<Blasphemy>(IsUpgraded)];
