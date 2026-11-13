@@ -5,3 +5,10 @@ dist/
 local.props
 .DS_Store
 *.user
+
+# Generated upload payload and Steam item identity
+workshop/content/
+workshop/mod_id.txt
+workshop/mod-uploader.log
+workshop/package-checksums.txt
+workshop/本机上传位置.txt

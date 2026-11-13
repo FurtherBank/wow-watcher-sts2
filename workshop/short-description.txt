@@ -1,0 +1,9 @@
+假如愚者是观者
+
+为愚者新增稀有技能「哇 观者！」，一次加入随机愤怒牌、随机平静牌、猛虎下山和渎神。仅限测试版，依赖 lamali 的 The Watcher（工坊 ID 3747492505）与 BaseLib。其他观者 Mod 版本的实现与适配仍在进行中。
+
+英文备用标题
+If the Fool Were the Watcher
+
+英文短介绍
+A rare Wah Skill for the Fool that adds a Wrath card, a Calm card, Rushdown, and Blasphemy. Beta only. Requires The Watcher by lamali (3747492505) and BaseLib. Support for other Watcher implementations is in progress.

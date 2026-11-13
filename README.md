@@ -110,3 +110,9 @@ godot --headless --path . --script scripts/import_art.gd
 - 十种语言均能加载卡名、格式化升级描述并显示牌面。
 
 本次结果见 [v0.1.4 端到端及语言验证](verification/v0.1.4-results.txt)。历史记录包括 [初版功能验证](verification/results.txt)、[初版卡图验证](verification/art-results.txt)、[v0.1.2 卡池验证](verification/pool-results.txt)。测试进程退出码为 0；退出时出现 Godot 渲染资源释放提示，未影响上述断言通过。当前仓库收录验证结果和截图，未提供自动执行这些游戏场景的测试工具。
+
+## 创意工坊发布准备
+
+工坊条目名称拟为「假如愚者是观者」，卡牌名称仍为「哇 观者！」。已准备 [发布流程](workshop/发布流程.txt)、[中文介绍](workshop/description.zh-CN.bbcode.txt)、[英文介绍](workshop/description.en.bbcode.txt) 和图片素材，上传配置初始设为私密。
+
+在项目根目录运行 `python3 scripts/prepare_workshop.py` 可刷新 `workshop/content/` 并检查材料；此命令不会连接或上传 Steam。完成首次工坊订阅安装验收后，再将条目公开。
