@@ -3,7 +3,7 @@
   "name": "假如愚者是观者 / If the Fool Were the Watcher",
   "author": "FurtherBank",
   "description": "为测试版愚者添加稀有哇旋律技能「哇 观者！」。依赖 Boninall 的观者 Watcher（工坊 3747526116）及 BaseLib。Requires Boninall Watcher (3747526116), BaseLib and the beta branch.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "has_pck": true,
   "has_dll": true,
   "min_game_version": "0.113.0",

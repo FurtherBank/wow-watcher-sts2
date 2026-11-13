@@ -1,0 +1,131 @@
+Boninall variant v0.2.1. Native macOS beta v0.113.0, isolated game/save. Exit 0.
+Mask artwork loaded and screenshots inspected; mouth curve removed.
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] Boninall implementation loaded
+[WOW PASS] stance pools exclude starters and exhaust
+[WOW PASS] three cards in each stance pool
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] large preview uses native fallback
+[WOW PASS] large portrait valid before room transition
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] upgrade description 0
+[WOW PASS] card displayed
+[WOW PASS] capture 0
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] four generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] no mantra card 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] upgrade description 1
+[WOW PASS] card displayed
+[WOW PASS] capture 1
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] four generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] no mantra card 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] upgrade description 2
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] four generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] no mantra card 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] locale title zhs
+[WOW PASS] locale formatted zhs
+[WOW PASS] locale screenshot zhs
+[WOW PASS] locale title zht
+[WOW PASS] locale formatted zht
+[WOW PASS] locale screenshot zht
+[WOW PASS] locale title eng
+[WOW PASS] locale formatted eng
+[WOW PASS] locale screenshot eng
+[WOW PASS] locale title jpn
+[WOW PASS] locale formatted jpn
+[WOW PASS] locale screenshot jpn
+[WOW PASS] locale title kor
+[WOW PASS] locale formatted kor
+[WOW PASS] locale screenshot kor
+[WOW PASS] locale title deu
+[WOW PASS] locale formatted deu
+[WOW PASS] locale screenshot deu
+[WOW PASS] locale title fra
+[WOW PASS] locale formatted fra
+[WOW PASS] locale screenshot fra
+[WOW PASS] locale title ita
+[WOW PASS] locale formatted ita
+[WOW PASS] locale screenshot ita
+[WOW PASS] locale title pol
+[WOW PASS] locale formatted pol
+[WOW PASS] locale screenshot pol
+[WOW PASS] locale title rus
+[WOW PASS] locale formatted rus
+[WOW PASS] locale screenshot rus
+[WOW PASS] effect manual play WatcherRushdown
+[WOW PASS] effect resolved WatcherRushdown
+[WOW PASS] generated Rushdown applies on Fool
+[WOW PASS] effect manual play WatcherInnerPeace
+[WOW PASS] effect resolved WatcherInnerPeace
+[WOW PASS] Inner Peace enters Calm on Fool
+[WOW PASS] effect manual play WatcherIndignation
+[WOW PASS] effect resolved WatcherIndignation
+[WOW PASS] Indignation enters Wrath on Fool
+[WOW PASS] leaving Calm grants two energy
+[WOW PASS] Rushdown deferred draws finish
+[WOW PASS] Rushdown draws two on entering Wrath
+[WOW PASS] attacking enemy available for conditional stance
+[WOW PASS] effect manual play WatcherFearNoEvil
+[WOW PASS] effect resolved WatcherFearNoEvil
+[WOW PASS] Wrath amplifies an actual attack
+[WOW PASS] Fear No Evil condition enters Calm on Fool
+[WOW PASS] effect manual play WatcherTantrum
+[WOW PASS] effect resolved WatcherTantrum
+[WOW PASS] Tantrum enters Wrath on Fool
+[WOW PASS] effect manual play WatcherSimmeringFury
+[WOW PASS] effect resolved WatcherSimmeringFury
+[WOW PASS] Simmering Fury schedules next-turn stance
+[WOW PASS] effect manual play WatcherMeditate
+[WOW PASS] effect resolved WatcherMeditate
+[WOW PASS] Meditate ends turn and next turn starts
+[WOW PASS] Meditate enters Calm before ending turn
+[WOW PASS] delayed Wrath resolves on Fool
+[WOW PASS] effect manual play WatcherBlasphemy
+[WOW PASS] effect resolved WatcherBlasphemy
+[WOW PASS] generated Blasphemy enters Divinity on Fool
+[WOW PASS] Divinity grants three energy
+[WOW PASS] Blasphemy death power applies
+[WOW PASS] effect manual play WatcherFearNoEvil
+[WOW PASS] effect resolved WatcherFearNoEvil
+[WOW PASS] Divinity amplifies an actual attack
+[WOW PASS] Blasphemy next-turn death resolves on Fool
+[WOW PASS] ALL CHECKS PASSED

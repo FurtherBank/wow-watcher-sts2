@@ -2,7 +2,7 @@
 
 为《杀戮尖塔 2》**测试版 v0.113.0** 的愚者添加稀有技能「哇 观者！」，带原生「哇」旋律标签。
 
-**本分支适配 Boninall 的 [观者 Watcher](https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116)，工坊 ID 为 3747526116。** 当前 Mod 版本为 v0.2.0，已对照该观者的 v0.10.10 实现。
+**本分支适配 Boninall 的 [观者 Watcher](https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116)，工坊 ID 为 3747526116。** 当前 Mod 版本为 v0.2.1，已对照该观者的 v0.10.10 实现。
 
 lamali 的 The Watcher 版完整保留在 [backup/lamali-v0.1.4](https://github.com/FurtherBank/wow-watcher-sts2/tree/backup/lamali-v0.1.4)；原安装包仍可从 [v0.1.4 Release](https://github.com/FurtherBank/wow-watcher-sts2/releases/tag/v0.1.4) 获取。
 
@@ -46,7 +46,7 @@ lamali 的 The Watcher 版完整保留在 [backup/lamali-v0.1.4](https://github.
 
 ### 手动安装
 
-使用本分支构建生成的 `WowWatcher-0.2.0.zip`，将其中 `WowWatcher` 文件夹放入游戏 `mods` 目录，覆盖旧版三个同名运行文件并完全重启游戏。
+使用本分支构建生成的 `WowWatcher-0.2.1.zip`，将其中 `WowWatcher` 文件夹放入游戏 `mods` 目录，覆盖旧版三个同名运行文件并完全重启游戏。
 
 - macOS 位于 `SlayTheSpire2.app/Contents/MacOS/mods/WowWatcher/`。
 - Windows、Linux 位于游戏安装目录下的 `mods/WowWatcher/`。
@@ -86,7 +86,7 @@ macOS 默认从当前用户的 Steam 安装位置读取引用。其他位置可�
 ./scripts/build.sh
 ```
 
-如果 .NET 不在 PATH 中，可设置 `DOTNET_BIN` 为本机 `dotnet` 可执行文件路径。输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.2.0.zip`。
+如果 .NET 不在 PATH 中，可设置 `DOTNET_BIN` 为本机 `dotnet` 可执行文件路径。输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.2.1.zip`。
 
 ## 创意工坊材料
 

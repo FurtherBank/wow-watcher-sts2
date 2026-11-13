@@ -2,7 +2,7 @@
   "title": "假如愚者是观者 (Boninall 观者适配版)",
   "description": null,
   "visibility": null,
-  "changeNote": "Boninall 观者适配版，版本 v0.2.0。\n\n适配观者 Watcher，作者 Boninall，创意工坊 ID 3747526116，已对照版本 0.10.10。\n沿用「哇 观者！」的四张牌效果、专属卡图、稀有度、0 费、哇标签与消耗。\n日语、德语、意大利语中的固定牌名和姿态用语已按本版前置调整。\nlamali 版已备份并独立维护。",
+  "changeNote": "v0.2.1：修正观者面罩卡图，移除面罩上不应显示的嘴部弧线。保留原有构图、三色光、卡牌效果及 Boninall 观者依赖。",
   "tags": [
     "Cards",
     "Extensions",
