@@ -129,3 +129,5 @@ Mask artwork loaded and screenshots inspected; mouth curve removed.
 [WOW PASS] Divinity amplifies an actual attack
 [WOW PASS] Blasphemy next-turn death resolves on Fool
 [WOW PASS] ALL CHECKS PASSED
+
+Steam Workshop item 3838913930 updated successfully. Steam client downloaded version 0.2.1. All three downloaded runtime files match the tested package SHA256.
