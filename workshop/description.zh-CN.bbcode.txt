@@ -1,16 +1,16 @@
-愚者挥起指挥棒，观者闪亮登场。
-
-为愚者牌池新增一张稀有技能牌「哇 观者！」，带原生「哇」旋律标签。
-
-[b]仅限测试版[/b]
-当前适用于《杀戮尖塔 2》测试分支 public-beta，已验证游戏版本 v0.113.0。
-
 [b]请确认订阅的是这个观者 Mod[/b]
 本 Mod 当前依赖 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116]观者 Watcher（作者 Boninall，创意工坊 ID 3747526116）[/url]。
 本条目为 Boninall 观者适配版。lamali 的 The Watcher 版另行维护，请按所使用的观者实现选择对应版本。两版观者使用相同内部标识，请只启用与本条目对应的前置。
 
 同时需要 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127]BaseLib（创意工坊 ID 3737335127）[/url]。
 已验证前置版本为观者 Watcher 0.10.10、BaseLib 3.4.8。
+
+愚者挥起指挥棒，观者闪亮登场。
+
+为愚者牌池新增一张稀有技能牌「哇 观者！」，带原生「哇」旋律标签。
+
+[b]仅限测试版[/b]
+当前适用于《杀戮尖塔 2》测试分支 public-beta，已验证游戏版本 v0.113.0。
 
 [b]卡牌效果[/b]
 哇 观者！

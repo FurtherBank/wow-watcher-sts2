@@ -1,16 +1,16 @@
-The Fool raises the baton. The Watcher takes the stage.
-
-Adds one rare Skill to the Fool's card pool, Wah Watcher!, with the native Wah melody tag.
-
-[b]Beta branch only[/b]
-Requires Slay the Spire 2's public-beta branch. Tested with game version v0.113.0.
-
 [b]Required Watcher implementation[/b]
 This mod currently depends on [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116]Watcher by Boninall, Workshop ID 3747526116[/url].
 This is the Boninall Watcher build. The lamali Watcher build is maintained separately. Choose the build matching your Watcher implementation; the two dependencies share an internal mod ID, so enable only the matching dependency.
 
 Also requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127]BaseLib, Workshop ID 3737335127[/url].
 Tested dependency versions are Watcher 0.10.10 and BaseLib 3.4.8.
+
+The Fool raises the baton. The Watcher takes the stage.
+
+Adds one rare Skill to the Fool's card pool, Wah Watcher!, with the native Wah melody tag.
+
+[b]Beta branch only[/b]
+Requires Slay the Spire 2's public-beta branch. Tested with game version v0.113.0.
 
 [b]The card[/b]
 Wah Watcher!

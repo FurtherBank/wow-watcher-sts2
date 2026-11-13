@@ -1,9 +1,9 @@
-假如愚者是观者
+假如愚者是观者 (Boninall 观者适配版)
 
 为愚者新增稀有技能「哇 观者！」，一次加入随机愤怒牌、随机平静牌、猛虎下山和渎神。仅限测试版，依赖 Boninall 的观者 Watcher（工坊 ID 3747526116）与 BaseLib。本条目适配 Boninall 版，lamali 版另行维护。
 
 英文备用标题
-If the Fool Were the Watcher
+If the Fool Were the Watcher (Boninall Edition)
 
 英文短介绍
 A rare Wah Skill for the Fool that adds a Wrath card, a Calm card, Rushdown, and Blasphemy. Beta only. Requires Watcher by Boninall (3747526116) and BaseLib. This build targets Boninall; the lamali build is maintained separately.

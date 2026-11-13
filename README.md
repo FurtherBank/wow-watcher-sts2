@@ -1,4 +1,4 @@
-# 假如愚者是观者
+# 假如愚者是观者 (Boninall 观者适配版)
 
 为《杀戮尖塔 2》**测试版 v0.113.0** 的愚者添加稀有技能「哇 观者！」，带原生「哇」旋律标签。
 
@@ -35,6 +35,16 @@ lamali 的 The Watcher 版完整保留在 [backup/lamali-v0.1.4](https://github.
 | --- | --- |
 | [BaseLib](https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127) | 3.4.8 |
 | [观者 Watcher，作者 Boninall](https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116) | 0.10.10 |
+
+请选择一种安装方式。
+
+### 创意工坊订阅
+
+订阅 [Steam 创意工坊条目](https://steamcommunity.com/sharedfiles/filedetails/?id=3838913930)和上面两个前置，等待下载完成后启用并重启游戏。工坊封面使用用户提供的游戏截图，介绍开头明确列出前置实现。
+
+从手动版切换时，先正常退出游戏，将本地 `mods/WowWatcher` 备份并移到游戏 `mods` 目录之外，再启动工坊版，避免保留两个安装来源。
+
+### 手动安装
 
 使用本分支构建生成的 `WowWatcher-0.2.0.zip`，将其中 `WowWatcher` 文件夹放入游戏 `mods` 目录，覆盖旧版三个同名运行文件并完全重启游戏。
 
@@ -80,7 +90,7 @@ macOS 默认从当前用户的 Steam 安装位置读取引用。其他位置可�
 
 ## 创意工坊材料
 
-[发布流程](workshop/发布流程.txt)、[中文介绍](workshop/description.zh-CN.bbcode.txt)、[英文介绍](workshop/description.en.bbcode.txt) 与上传配置均对应本分支的 Boninall 版。初始可见性为私密，首次创建后应先通过工坊订阅安装验收再公开。
+[发布流程](workshop/发布流程.txt)、[中文介绍](workshop/description.zh-CN.bbcode.txt)、[英文介绍](workshop/description.en.bbcode.txt) 与上传配置均对应本分支的 Boninall 版。条目已完成上传、订阅下载与下载副本的隔离游戏验证，并公开发布。条目 ID 和运行文件校验值记录在 [published-item.json](workshop/published-item.json)。上传配置保留服务器上的可见性和多语言正文，避免更新包时覆盖已发布的页面编辑。
 
 ```sh
 python3 scripts/prepare_workshop.py

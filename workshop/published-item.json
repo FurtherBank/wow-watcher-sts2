@@ -1,0 +1,24 @@
+{
+  "workshop_id": "3838913930",
+  "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3838913930",
+  "title": "假如愚者是观者 (Boninall 观者适配版)",
+  "version": "0.2.0",
+  "variant": "Boninall Watcher 3747526116",
+  "visibility": "public",
+  "published_date": "2026-11-13",
+  "dependencies": [
+    3747526116,
+    3737335127
+  ],
+  "description_locales": {
+    "schinese": "description.zh-CN.bbcode.txt",
+    "english": "description.en.bbcode.txt"
+  },
+  "cover_file": "image.png",
+  "cover_source_filename": "哇观者截屏.png",
+  "runtime_sha256": {
+    "WowWatcher.json": "cf3eded7c49a69a79cbee41b94780f34a0e6b6d9e6eb65a1a98c7dc3040d129f",
+    "WowWatcher.pck": "24c737a81e020f16849c1b433982aae4b52f6e0e8f7eaeb264861b052d5288d6",
+    "WowWatcher.dll": "d39ade7eb1afa0025a676743baa9993239179a724ad83fab77ab1424fe8d9f1d"
+  }
+}

@@ -4,21 +4,24 @@ Steam 创意工坊发布流程
 
 当前状态
 
-材料已准备，尚未创建、上传或公开 Steam 创意工坊条目。
-创意工坊名称为「假如愚者是观者」。Mod 内新增卡牌的名称仍为「哇 观者！」。
+本条目已于 2026-11-13 公开发布，版本 v0.2.0。
+https://steamcommunity.com/sharedfiles/filedetails/?id=3838913930
+
+现有条目 ID 为 3838913930。更新时复用该条目，不要删除 mod_id.txt 另建条目。准备脚本会依据 published-item.json 核对并恢复本地 ID。
+创意工坊名称为「假如愚者是观者 (Boninall 观者适配版)」。Mod 内新增卡牌的名称仍为「哇 观者！」。
 待上传内容直接使用已完成游戏副本测试的 v0.2.0 三个运行文件。创意工坊标题与游戏内 Mod 列表名称是独立字段，当前游戏内列表显示「假如愚者是观者 / If the Fool Were the Watcher」。
 
 材料位置
 
 <项目目录>/workshop
 
-workshop.json                     上传配置，初始可见性为 private
+workshop.json                     上传配置，当前保持服务器的可见性和多语言正文
 content/                          仅 DLL、PCK、JSON 三个运行文件
 image.png                         创意工坊封面
 previews/card-normal.png          普通版实际游戏截图裁切
 previews/card-upgraded.png        升级版实际游戏截图裁切
-description.zh-CN.bbcode.txt       中文页面正文，已写入上传配置
-description.en.bbcode.txt          英文页面正文备用稿
+description.zh-CN.bbcode.txt       已发布中文正文的本地副本，网页修改后同步
+description.en.bbcode.txt          已发布英文正文的本地副本，网页修改后同步
 short-description.txt             中英文短介绍和英文备用标题
 change-note.txt                   首次发布说明
 package-checksums.txt             本地运行文件校验值，由准备脚本生成
@@ -33,11 +36,11 @@ package-checksums.txt             本地运行文件校验值，由准备脚本�
 <官方上传器目录>
 
 源码版本为 d7b7e6b16c413d5a124f474f9e5104ef01f76ab1。
-已运行帮助命令和不存在目录的本地校验，命令入口正常。尚未执行 Steam 初始化、创建条目或上传，首次连接 Steam 的结果仍需在真正上传时确认。
+官方工具已完成 Steam 初始化、上传文件和前置依赖写入；网页已完成中英文正文编辑和公开操作。
 在其他机器上可从官方仓库取得适配平台的工具，或按官方项目发布配置自行构建。
 工具目录中保留了 ModUploader、Steam 原生库和 steam_appid.txt。执行时在该目录内运行，不能只拷走可执行文件。
 
-首次发布
+首次发布流程，以下保留为历史操作参考
 
 1. 确认游戏验收完成，并准备好发布所使用的 Steam 账号。
 
@@ -48,9 +51,9 @@ package-checksums.txt             本地运行文件校验值，由准备脚本�
 进入项目根目录后执行
 python3 scripts/prepare_workshop.py
 
-应显示名称「假如愚者是观者」、版本 0.2.0、可见性 private。
+首次上传前应使用 private；当前已发布的配置会显示 unchanged on Steam，保持服务器上的公开状态。标题带 Boninall 观者适配版标识。
 脚本检查图片体积、介绍正文、前置条目 ID 和内容目录，并复制运行文件，不会连接 Steam。
-如果修改介绍，同时更新对应正文文件和 workshop.json 的 description；校验会拦截二者不一致的情况。
+当前 description 设为 null，更新运行文件时不会覆盖已编辑的中英文正文。修改介绍时同步本地对应语言的文稿，并在工坊的对应语言编辑页保存。
 
 3. 首先上传私密条目。
 
@@ -102,7 +105,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127
 手牌接近满额时，多出的牌进入弃牌堆。
 切换所需语言并重新进入游戏，卡名和描述正常。
 
-现有游戏副本测试已经覆盖这些核心行为，但尚未经过 Steam 首次上传、订阅、下载的完整路径；这一环必须在条目创建后完成。
+本条目现已完成 Steam 上传、订阅、下载文件校验，并使用工坊下载副本重跑隔离游戏测试，结果通过。真实游戏当前仍在运行，未强制退出玩家的游戏或改动其存档。
 
 7. 改为公开并核对访客访问。
 
@@ -117,7 +120,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127
 编辑 change-note.txt，同时更新 workshop.json 的 changeNote。
 执行同一条 upload 命令更新原条目，确认日志使用的是已存在的 ID。
 上传后复查页面版本标记、必需物品和可见性。工坊的 branch 字段不可替代介绍中的测试版说明。
-如果已经在网页手动编辑正文，后续上传前同步到本地材料；配置中非空的 description 会覆盖网页正文。
+如需改动介绍，按语言在网页编辑并同步本地文稿。当前 description 保持 null；若改为非空，官方上传器会覆盖默认语言正文。当前 visibility 保持 null，保留服务器公开状态。
 
 参考来源
 

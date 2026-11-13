@@ -17,8 +17,25 @@ if manifest['version'] != json.loads((root / 'WowWatcher.json').read_text())['ve
     raise SystemExit('Build version differs from source manifest; rebuild first.')
 if set(config['dependencies']) != {3747526116, 3737335127}:
     raise SystemExit('Workshop must require the specified Watcher and BaseLib items.')
-if config['description'] != (workspace / 'description.zh-CN.bbcode.txt').read_text().strip():
-    raise SystemExit('Description text differs from workshop.json; synchronize both files.')
+published_record = workspace / 'published-item.json'
+if published_record.exists():
+    published = json.loads(published_record.read_text())
+    if set(published['dependencies']) != set(config['dependencies']):
+        raise SystemExit('Published item belongs to a different Watcher implementation.')
+    item_id = str(published['workshop_id'])
+    id_file = workspace / 'mod_id.txt'
+    if id_file.exists() and id_file.read_text().strip() != item_id:
+        raise SystemExit('mod_id.txt differs from the published item record; inspect before uploading.')
+    id_file.write_text(item_id + '\n')
+description = config.get('description')
+local_descriptions = [(workspace / name).read_text().strip() for name in
+                      ('description.zh-CN.bbcode.txt', 'description.en.bbcode.txt')]
+if description is None:
+    if not published_record.exists():
+        raise SystemExit('A first upload needs a description; no published item record exists.')
+else:
+    if description not in local_descriptions:
+        raise SystemExit('Description text differs from local listing copy; synchronize before uploading.')
 for image in [workspace / 'image.png', *sorted((workspace / 'previews').glob('*'))]:
     if not image.is_file() or not 0 < image.stat().st_size < 1_000_000:
         raise SystemExit('Preview must exist and be less than 1 MB: ' + str(image))
@@ -33,5 +50,5 @@ for name in files:
     checksums.append(checksum + '  content/' + name)
 (workspace / 'package-checksums.txt').write_text('\n'.join(checksums) + '\n')
 print('Prepared ' + config['title'] + ', v' + manifest['version'])
-print('Visibility: ' + str(config.get('visibility', 'unchanged')))
+print('Visibility: ' + str(config.get('visibility') or 'unchanged on Steam'))
 print('Payload contains only the DLL, PCK, and manifest. No Steam request was made.')
