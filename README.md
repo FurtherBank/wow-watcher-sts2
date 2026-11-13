@@ -36,6 +36,8 @@ v0.1.3 修复查看卡牌大图后切换房间、再次抽到此牌时可能发�
 
 ## 下载与安装
 
+Steam 创意工坊：[lamali 观者适配版](https://steamcommunity.com/sharedfiles/filedetails/?id=3839088794) · [Boninall 观者适配版](https://steamcommunity.com/sharedfiles/filedetails/?id=3838913930)。请按所用观者实现选择对应版本，两种观者前置请勿同时启用。
+
 从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.5.zip`。
 
 使用前请切换到游戏测试分支，并安装、启用以下前置 Mod。

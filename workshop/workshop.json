@@ -1,8 +1,8 @@
 {
-  "title": "假如愚者是观者",
-  "description": "愚者挥起指挥棒，观者闪亮登场。\n\n为愚者牌池新增一张稀有技能牌「哇 观者！」，带原生「哇」旋律标签。\n\n[b]仅限测试版[/b]\n当前适用于《杀戮尖塔 2》测试分支 public-beta，已验证游戏版本 v0.113.0。\n\n[b]请确认订阅的是这个观者 Mod[/b]\n本 Mod 当前依赖 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747492505]The Watcher（作者 lamali，创意工坊 ID 3747492505）[/url]。\n目前仅适配上述实现。其他观者 Mod 版本的实现与适配仍在进行中，后续进展会在更新说明中公布。\n\n同时需要 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127]BaseLib（创意工坊 ID 3737335127）[/url]。\n已验证前置版本为 The Watcher 1.5.16、BaseLib 3.4.8。\n\n[b]卡牌效果[/b]\n哇 观者！\n稀有 · 0 费 · 技能 · 哇 · 消耗\n\n将一张随机的愤怒、平静牌以及猛虎下山和渎神加入手牌。\n升级后，加入的牌均已升级。\n\n愤怒牌和平静牌各随机一张，加上猛虎下山和渎神，共四张。\n愤怒、平静随机池排除观者初始两张牌，以及带消耗的姿态牌。条件触发和延迟触发的姿态牌仍可生成。\n加入的牌保留自身费用；手牌已满时，多出的牌进入弃牌堆。\n\n[b]如何使用[/b]\n切换到游戏测试分支，订阅本 Mod、上面链接中的 The Watcher 和 BaseLib，在游戏内启用并重启游戏。\n这张牌会进入愚者牌池，可通过正常游戏流程获得。\n\n[b]语言与验证范围[/b]\n支持简体中文、繁体中文、英语、日语、韩语、德语、法语、意大利语、波兰语和俄语。\n本卡的翻译参照所依赖观者 Mod 的牌名及姿态用语。繁体中文环境下，前置 Mod 的部分牌名可能回退为英文。\n已在 macOS、游戏测试版 v0.113.0 中完成普通版和升级版实际出牌、满手溢出、多语言显示及卡图切换回归测试。Windows 和 Linux 尚未实机验证。\n\n[b]致谢与源码[/b]\n感谢 lamali 的 The Watcher、BaseLib 的作者，以及 Mega Crit。\n本 Mod 的专属卡图使用 AI 工具生成。\n[url=https://github.com/FurtherBank/wow-watcher-sts2]GitHub 源码与更新记录[/url]",
-  "visibility": "private",
-  "changeNote": "首次发布，版本 v0.1.4。\n\n为测试版愚者新增稀有技能「哇 观者！」。\n0 费，带哇旋律标签，消耗。加入随机愤怒牌、随机平静牌、猛虎下山和渎神，升级后加入的牌均已升级。\n包含专属卡图与十种语言翻译。\n当前适配 lamali 的 The Watcher（创意工坊 ID 3747492505），并依赖 BaseLib。\n其他观者 Mod 版本的实现与适配仍在进行中。",
+  "title": "假如愚者是观者 (lamali 观者适配版)",
+  "description": null,
+  "visibility": null,
+  "changeNote": "v0.1.5：首次发布 lamali 观者适配版，与 Boninall 版保持相同卡牌效果、最新面罩卡图和多语言支持。",
   "tags": [
     "Cards",
     "Extensions",

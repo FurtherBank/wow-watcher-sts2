@@ -1,0 +1,17 @@
+{
+  "workshop_id": 3839088794,
+  "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3839088794",
+  "title": "假如愚者是观者 (lamali 观者适配版)",
+  "version": "0.1.5",
+  "dependencies": [
+    3747492505,
+    3737335127
+  ],
+  "visibility": "public",
+  "cover_source_filename": "哇观者截屏.png",
+  "runtime_sha256": {
+    "WowWatcher.json": "2c4b4a392c8b6d2e28f2f47e9d40f3b1432a6277a9c7a367dbe354d34e00b890",
+    "WowWatcher.pck": "b2e10880735b1743db884dfc846453e5def62aa3f5bc79fda98a3b9651d9cd48",
+    "WowWatcher.dll": "91e4e2d15ce66a0f76a8ee8b726a212b65d33738873942728d38862f4c3123e2"
+  }
+}
