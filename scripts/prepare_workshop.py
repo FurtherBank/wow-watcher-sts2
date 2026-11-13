@@ -15,7 +15,7 @@ manifest = json.loads((source / 'WowWatcher.json').read_text())
 config = json.loads((workspace / 'workshop.json').read_text())
 if manifest['version'] != json.loads((root / 'WowWatcher.json').read_text())['version']:
     raise SystemExit('Build version differs from source manifest; rebuild first.')
-if set(config['dependencies']) != {3747492505, 3737335127}:
+if set(config['dependencies']) != {3747526116, 3737335127}:
     raise SystemExit('Workshop must require the specified Watcher and BaseLib items.')
 if config['description'] != (workspace / 'description.zh-CN.bbcode.txt').read_text().strip():
     raise SystemExit('Description text differs from workshop.json; synchronize both files.')

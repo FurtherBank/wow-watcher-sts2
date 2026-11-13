@@ -4,7 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.1.4</Version>
+    <Version>0.2.0</Version>
     <PathMap>$(MSBuildProjectDirectory)=/_/WowWatcher</PathMap>
     <GodotDisabledSourceGenerators>GodotPluginsInitializer</GodotDisabledSourceGenerators>
     <SteamApps Condition="'$(SteamApps)' == ''">$(HOME)/Library/Application Support/Steam/steamapps</SteamApps>
@@ -15,10 +15,10 @@
     <Reference Include="sts2" HintPath="$(GameData)/sts2.dll" Private="false" />
     <Reference Include="0Harmony" HintPath="$(GameData)/0Harmony.dll" Private="false" />
     <Reference Include="BaseLib" HintPath="$(Workshop)/3737335127/BaseLib/BaseLib.dll" Private="false" />
-    <Reference Include="Watcher" HintPath="$(Workshop)/3747492505/Watcher.dll" Private="false" />
+    <Reference Include="Watcher" HintPath="$(Workshop)/3747526116/Watcher.dll" Private="false" />
   </ItemGroup>
   <Target Name="CheckBuildReferences" BeforeTargets="ResolveAssemblyReferences">
     <Error Condition="!Exists('$(GameData)/sts2.dll')" Text="Set GameData to the STS2 beta v0.113.0 directory containing sts2.dll (see README)." />
-    <Error Condition="!Exists('$(Workshop)/3737335127/BaseLib/BaseLib.dll') Or !Exists('$(Workshop)/3747492505/Watcher.dll')" Text="Set Workshop to the STS2 Steam Workshop content directory, with BaseLib and The Watcher installed (see README)." />
+    <Error Condition="!Exists('$(Workshop)/3737335127/BaseLib/BaseLib.dll') Or !Exists('$(Workshop)/3747526116/Watcher.dll')" Text="Set Workshop to the STS2 Steam Workshop content directory, with BaseLib and Boninall Watcher (3747526116) installed (see README)." />
   </Target>
 </Project>

@@ -6,7 +6,7 @@ Steam 创意工坊发布流程
 
 材料已准备，尚未创建、上传或公开 Steam 创意工坊条目。
 创意工坊名称为「假如愚者是观者」。Mod 内新增卡牌的名称仍为「哇 观者！」。
-待上传内容直接使用已完成游戏副本测试的 v0.1.4 三个运行文件。创意工坊标题与游戏内 Mod 列表名称是独立字段，当前游戏内列表仍显示「哇 观者！ / Wah Watcher!」。
+待上传内容直接使用已完成游戏副本测试的 v0.2.0 三个运行文件。创意工坊标题与游戏内 Mod 列表名称是独立字段，当前游戏内列表显示「假如愚者是观者 / If the Fool Were the Watcher」。
 
 材料位置
 
@@ -48,7 +48,7 @@ package-checksums.txt             本地运行文件校验值，由准备脚本�
 进入项目根目录后执行
 python3 scripts/prepare_workshop.py
 
-应显示名称「假如愚者是观者」、版本 0.1.4、可见性 private。
+应显示名称「假如愚者是观者」、版本 0.2.0、可见性 private。
 脚本检查图片体积、介绍正文、前置条目 ID 和内容目录，并复制运行文件，不会连接 Steam。
 如果修改介绍，同时更新对应正文文件和 workshop.json 的 description；校验会拦截二者不一致的情况。
 
@@ -69,8 +69,8 @@ python3 scripts/prepare_workshop.py
 打开上传结果对应的工坊页面。核对标题、介绍、封面、普通版和升级版截图。
 Required items / 必需物品必须列出以下两个条目，不能只在介绍中放链接。
 
-The Watcher，作者 lamali，工坊 ID 3747492505
-https://steamcommunity.com/sharedfiles/filedetails/?id=3747492505
+观者 Watcher，作者 Boninall，工坊 ID 3747526116
+https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116
 
 BaseLib，工坊 ID 3737335127
 https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127
@@ -89,7 +89,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127
 
 完全退出游戏。
 把手动安装的 mods/WowWatcher 备份并移到游戏 mods 目录之外，避免验收到本地副本。
-订阅自己的私密条目，并确认同时订阅上面指定的 The Watcher 和 BaseLib；等待下载完成。
+订阅自己的私密条目，并确认同时订阅上面指定的 Boninall 观者 Watcher 和 BaseLib；等待下载完成。
 通过 Steam 启动游戏，确认三个 Mod 已启用，且实际加载来自工坊下载的本条目。
 
 使用愚者获得并打出这张牌，验证以下体验。

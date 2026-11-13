@@ -1,0 +1,228 @@
+WowWatcher v0.2.0 — Boninall Watcher integration verification
+Game: macOS beta v0.113.0. Dependency: Boninall Watcher 0.10.10 (3747526116), BaseLib 3.4.8.
+Combat scene also loaded original midori_black_card and RegentFemPortraits.
+Private game/save copies only; real player progress was not modified.
+Native visual integration run exit code: 0.
+
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] Boninall implementation loaded
+[WOW PASS] stance pools exclude starters and exhaust
+[WOW PASS] three cards in each stance pool
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] large preview uses native fallback
+[WOW PASS] large portrait valid before room transition
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] upgrade description 0
+[WOW PASS] card displayed
+[WOW PASS] capture 0
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] four generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] no mantra card 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] upgrade description 1
+[WOW PASS] card displayed
+[WOW PASS] capture 1
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] four generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] no mantra card 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] upgrade description 2
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] four generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] no mantra card 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] locale title zhs
+[WOW PASS] locale formatted zhs
+[WOW PASS] locale screenshot zhs
+[WOW LOCALE] zhs 哇 观者！ 将一张随机的[gold]愤怒[/gold]、[gold]平静[/gold]牌以及[gold]猛虎下山[/gold]和[gold]渎神[/gold]加入手牌。 / 加入的牌均已[gold]升级[/gold] / [gold]消耗[/gold]。
+[WOW PASS] locale title zht
+[WOW PASS] locale formatted zht
+[WOW PASS] locale screenshot zht
+[WOW LOCALE] zht 哇 觀者！ 將隨機的[gold]憤怒[/gold]牌、[gold]平靜[/gold]牌各1張以及[gold]猛虎下山[/gold]和[gold]瀆神[/gold]加入手牌。 / 加入的牌均已[gold]升級[/gold] / [gold]消耗[/gold]。
+[WOW PASS] locale title eng
+[WOW PASS] locale formatted eng
+[WOW PASS] locale screenshot eng
+[WOW LOCALE] eng Wah Watcher! Add a random card for entering [gold]Wrath[/gold], a random card for entering [gold]Calm[/gold], [gold]Rushdown[/gold], and [gold]Blasphemy[/gold] to your hand. / All added cards are [gold]Upgraded[/gold]. / [gold]Exhaust[/gold].
+[WOW PASS] locale title jpn
+[WOW PASS] locale formatted jpn
+[WOW PASS] locale screenshot jpn
+[WOW LOCALE] jpn ワー ウォッチャー！ [gold]憤怒[/gold]に入れるランダムなカード1枚と[gold]平静[/gold]に入れるランダムなカード1枚、[gold]急襲[/gold]、[gold]冒涜[/gold]を手札に加える。 / 加えるカードはすべて[gold]アップグレード[/gold]済み。 / [gold]廃棄[/gold]。
+[WOW PASS] locale title kor
+[WOW PASS] locale formatted kor
+[WOW PASS] locale screenshot kor
+[WOW LOCALE] kor 와 와쳐! [gold]진노[/gold]에 들어갈 수 있는 무작위 카드 1장과 [gold]명상[/gold]에 들어갈 수 있는 무작위 카드 1장, [gold]추월[/gold], [gold]신성 모독[/gold]을 손에 넣습니다. / 추가되는 카드는 모두 [gold]강화[/gold]되어 있습니다. / [gold]소멸[/gold].
+[WOW PASS] locale title deu
+[WOW PASS] locale formatted deu
+[WOW PASS] locale screenshot deu
+[WOW LOCALE] deu Wa Seherin! Füge deiner Hand je eine zufällige Karte zum Annehmen von [gold]Zorn[/gold] und [gold]Ruhe[/gold] sowie [gold]Eile[/gold] und [gold]Blasphemie[/gold] hinzu. / Alle hinzugefügten Karten sind [gold]verbessert[/gold]. / [gold]Erschöpft[/gold].
+[WOW PASS] locale title fra
+[WOW PASS] locale formatted fra
+[WOW PASS] locale screenshot fra
+[WOW LOCALE] fra Wah Gardienne ! Ajoutez à votre main une carte aléatoire permettant d’entrer en [gold]Colère[/gold], une carte aléatoire permettant d’entrer en [gold]Calme[/gold], ainsi que [gold]Précipitation[/gold] et [gold]Blasphème[/gold]. / Toutes les cartes ajoutées sont [gold]améliorées[/gold]. / [gold]Épuisement[/gold].
+[WOW PASS] locale title ita
+[WOW PASS] locale formatted ita
+[WOW PASS] locale screenshot ita
+[WOW LOCALE] ita Wah Watcher! Aggiungi alla tua mano una carta casuale che permette di entrare in [gold]Furia[/gold], una carta casuale che permette di entrare in [gold]Quiete[/gold], [gold]Alla Carica[/gold] e [gold]Blasfemia[/gold]. / Tutte le carte aggiunte sono [gold]Migliorate[/gold]. / [gold]Esaurimento[/gold].
+[WOW PASS] locale title pol
+[WOW PASS] locale formatted pol
+[WOW PASS] locale screenshot pol
+[WOW LOCALE] pol Wah Obserwatorka! Dodaj do ręki losową kartę pozwalającą przyjąć [gold]postawę Gniewu[/gold], losową kartę pozwalającą przyjąć [gold]postawę Spokoju[/gold], [gold]Blitzkrieg[/gold] oraz [gold]Bluźnierstwo[/gold]. / Wszystkie dodane karty są [gold]Ulepszone[/gold]. / [gold]Wyczerpanie[/gold].
+[WOW PASS] locale title rus
+[WOW PASS] locale formatted rus
+[WOW PASS] locale screenshot rus
+[WOW LOCALE] rus Вах Созерцающая! Добавьте в руку случайную карту для перехода в [gold]Гнев[/gold], случайную карту для перехода в [gold]Спокойствие[/gold], а также [gold]Наброситься[/gold] и [gold]Святотатство[/gold]. / Все добавленные карты [gold]улучшены[/gold]. / [gold]Сжигается[/gold].
+[WOW PASS] effect manual play WatcherRushdown
+[WOW PASS] effect resolved WatcherRushdown
+[WOW PASS] generated Rushdown applies on Fool
+[WOW PASS] effect manual play WatcherInnerPeace
+[WOW PASS] effect resolved WatcherInnerPeace
+[WOW PASS] Inner Peace enters Calm on Fool
+[WOW PASS] effect manual play WatcherIndignation
+[WOW PASS] effect resolved WatcherIndignation
+[WOW PASS] Indignation enters Wrath on Fool
+[WOW PASS] leaving Calm grants two energy
+[WOW PASS] Rushdown deferred draws finish
+[WOW PASS] Rushdown draws two on entering Wrath
+[WOW PASS] attacking enemy available for conditional stance
+[WOW PASS] effect manual play WatcherFearNoEvil
+[WOW PASS] effect resolved WatcherFearNoEvil
+[WOW PASS] Wrath amplifies an actual attack
+[WOW PASS] Fear No Evil condition enters Calm on Fool
+[WOW PASS] effect manual play WatcherTantrum
+[WOW PASS] effect resolved WatcherTantrum
+[WOW PASS] Tantrum enters Wrath on Fool
+[WOW PASS] effect manual play WatcherSimmeringFury
+[WOW PASS] effect resolved WatcherSimmeringFury
+[WOW PASS] Simmering Fury schedules next-turn stance
+[WOW PASS] effect manual play WatcherMeditate
+[WOW PASS] effect resolved WatcherMeditate
+[WOW PASS] Meditate ends turn and next turn starts
+[WOW PASS] Meditate enters Calm before ending turn
+[WOW PASS] delayed Wrath resolves on Fool
+[WOW PASS] effect manual play WatcherBlasphemy
+[WOW PASS] effect resolved WatcherBlasphemy
+[WOW PASS] generated Blasphemy enters Divinity on Fool
+[WOW PASS] Divinity grants three energy
+[WOW PASS] Blasphemy death power applies
+[WOW PASS] effect manual play WatcherFearNoEvil
+[WOW PASS] effect resolved WatcherFearNoEvil
+[WOW PASS] Divinity amplifies an actual attack
+[WOW PASS] Blasphemy next-turn death resolves on Fool
+[WOW PASS] ALL CHECKS PASSED
+
+Portrait lifecycle regression exit code: 0.
+[PORTRAIT] assembly=WowWatcher, Version=0.2.0.0, Culture=neutral, PublicKeyToken=null HasPortrait=False CustomPortraitPath=
+[PORTRAIT] PASS third-party assembly loaded
+[PORTRAIT] PASS real NCard ready 0
+[PORTRAIT] PASS normal and big dimensions 0
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 0
+[PORTRAIT] PASS lifecycle 0
+[PORTRAIT] PASS real NCard ready 1
+[PORTRAIT] PASS normal and big dimensions 1
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 1
+[PORTRAIT] PASS lifecycle 1
+[PORTRAIT] PASS real NCard ready 2
+[PORTRAIT] PASS normal and big dimensions 2
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 2
+[PORTRAIT] PASS lifecycle 2
+[PORTRAIT] PASS real NCard ready 3
+[PORTRAIT] PASS normal and big dimensions 3
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 3
+[PORTRAIT] PASS lifecycle 3
+[PORTRAIT] PASS real NCard ready 4
+[PORTRAIT] PASS normal and big dimensions 4
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 4
+[PORTRAIT] PASS lifecycle 4
+[PORTRAIT] PASS real NCard ready 5
+[PORTRAIT] PASS normal and big dimensions 5
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 5
+[PORTRAIT] PASS lifecycle 5
+[PORTRAIT] PASS real NCard ready 6
+[PORTRAIT] PASS normal and big dimensions 6
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 6
+[PORTRAIT] PASS lifecycle 6
+[PORTRAIT] PASS real NCard ready 7
+[PORTRAIT] PASS normal and big dimensions 7
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 7
+[PORTRAIT] PASS lifecycle 7
+[PORTRAIT] PASS real NCard ready 8
+[PORTRAIT] PASS normal and big dimensions 8
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 8
+[PORTRAIT] PASS lifecycle 8
+[PORTRAIT] PASS real NCard ready 9
+[PORTRAIT] PASS normal and big dimensions 9
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 9
+[PORTRAIT] PASS lifecycle 9
+[PORTRAIT] PASS real NCard ready 10
+[PORTRAIT] PASS normal and big dimensions 10
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 10
+[PORTRAIT] PASS lifecycle 10
+[PORTRAIT] PASS real NCard ready 11
+[PORTRAIT] PASS normal and big dimensions 11
+[PORTRAIT] sameWrapper=True missed=1
+[PORTRAIT] post-unload originalValid=True
+[PORTRAIT] PASS after-boundary normal and big valid 11
+[PORTRAIT] PASS lifecycle 11
+[PORTRAIT] PASS COMPLETE 12 lifecycle boundaries
+
+The native engine emitted worker-task warnings and resource cleanup messages; all scenario assertions completed.
+Six stance-pool cards were played as Fool. Rushdown, stance energy, conditional/delayed stance transitions, actual attack amplification, and Blasphemy next-turn death were exercised.
+Native gameplay chooses and draws fixture cards in an isolated run; this is not a full campaign or a Steam Workshop subscription/download test.
+
+Wrong-dependency diagnostic check: PASS. Loading lamali Watcher 1.5.16 with this build emitted the expected initialization error identifying Boninall Workshop 3747526116. This confirms the diagnostic; it does not claim the unsupported combination is playable.

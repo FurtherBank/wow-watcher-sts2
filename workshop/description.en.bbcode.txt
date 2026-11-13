@@ -6,11 +6,11 @@ Adds one rare Skill to the Fool's card pool, Wah Watcher!, with the native Wah m
 Requires Slay the Spire 2's public-beta branch. Tested with game version v0.113.0.
 
 [b]Required Watcher implementation[/b]
-This mod currently depends on [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747492505]The Watcher by lamali, Workshop ID 3747492505[/url].
-Only that implementation is currently supported. Implementations and adaptations for other Watcher mods are still in progress; updates will be announced in the change notes.
+This mod currently depends on [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116]Watcher by Boninall, Workshop ID 3747526116[/url].
+This is the Boninall Watcher build. The lamali Watcher build is maintained separately. Choose the build matching your Watcher implementation; the two dependencies share an internal mod ID, so enable only the matching dependency.
 
 Also requires [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127]BaseLib, Workshop ID 3737335127[/url].
-Tested dependency versions are The Watcher 1.5.16 and BaseLib 3.4.8.
+Tested dependency versions are Watcher 0.10.10 and BaseLib 3.4.8.
 
 [b]The card[/b]
 Wah Watcher!
@@ -28,10 +28,10 @@ The card is added to the Fool's normal card pool and can be obtained through nor
 
 [b]Languages and testing[/b]
 Supports Simplified Chinese, Traditional Chinese, English, Japanese, Korean, German, French, Italian, Polish, and Russian.
-Translations follow the required Watcher mod's card and stance terminology. Some dependency card names may fall back to English in Traditional Chinese.
+Translations follow the required Watcher mod's card and stance terminology.
 Tested on macOS with beta v0.113.0, including normal and upgraded card plays, hand overflow, localized card displays, and portrait lifecycle regression. Windows and Linux have not been tested on actual devices.
 
 [b]Credits and source[/b]
-Thanks to lamali for The Watcher, the BaseLib contributors, and Mega Crit.
+Thanks to Boninall for Watcher, the BaseLib contributors, and Mega Crit.
 The custom card illustration was generated with AI tools.
-[url=https://github.com/FurtherBank/wow-watcher-sts2]Source and updates on GitHub[/url]
+[url=https://github.com/FurtherBank/wow-watcher-sts2/tree/feat/boninall-watcher]Source and updates on GitHub[/url]

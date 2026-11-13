@@ -6,11 +6,11 @@
 当前适用于《杀戮尖塔 2》测试分支 public-beta，已验证游戏版本 v0.113.0。
 
 [b]请确认订阅的是这个观者 Mod[/b]
-本 Mod 当前依赖 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747492505]The Watcher（作者 lamali，创意工坊 ID 3747492505）[/url]。
-目前仅适配上述实现。其他观者 Mod 版本的实现与适配仍在进行中，后续进展会在更新说明中公布。
+本 Mod 当前依赖 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3747526116]观者 Watcher（作者 Boninall，创意工坊 ID 3747526116）[/url]。
+本条目为 Boninall 观者适配版。lamali 的 The Watcher 版另行维护，请按所使用的观者实现选择对应版本。两版观者使用相同内部标识，请只启用与本条目对应的前置。
 
 同时需要 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3737335127]BaseLib（创意工坊 ID 3737335127）[/url]。
-已验证前置版本为 The Watcher 1.5.16、BaseLib 3.4.8。
+已验证前置版本为观者 Watcher 0.10.10、BaseLib 3.4.8。
 
 [b]卡牌效果[/b]
 哇 观者！
@@ -24,15 +24,15 @@
 加入的牌保留自身费用；手牌已满时，多出的牌进入弃牌堆。
 
 [b]如何使用[/b]
-切换到游戏测试分支，订阅本 Mod、上面链接中的 The Watcher 和 BaseLib，在游戏内启用并重启游戏。
+切换到游戏测试分支，订阅本 Mod、上面链接中的观者 Watcher 和 BaseLib，在游戏内启用并重启游戏。
 这张牌会进入愚者牌池，可通过正常游戏流程获得。
 
 [b]语言与验证范围[/b]
 支持简体中文、繁体中文、英语、日语、韩语、德语、法语、意大利语、波兰语和俄语。
-本卡的翻译参照所依赖观者 Mod 的牌名及姿态用语。繁体中文环境下，前置 Mod 的部分牌名可能回退为英文。
+本卡的翻译参照所依赖观者 Mod 的牌名及姿态用语。
 已在 macOS、游戏测试版 v0.113.0 中完成普通版和升级版实际出牌、满手溢出、多语言显示及卡图切换回归测试。Windows 和 Linux 尚未实机验证。
 
 [b]致谢与源码[/b]
-感谢 lamali 的 The Watcher、BaseLib 的作者，以及 Mega Crit。
+感谢 Boninall 的观者 Watcher、BaseLib 的作者，以及 Mega Crit。
 本 Mod 的专属卡图使用 AI 工具生成。
-[url=https://github.com/FurtherBank/wow-watcher-sts2]GitHub 源码与更新记录[/url]
+[url=https://github.com/FurtherBank/wow-watcher-sts2/tree/feat/boninall-watcher]GitHub 源码与更新记录[/url]

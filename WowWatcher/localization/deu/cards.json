@@ -1,4 +1,4 @@
 {
   "WOWWATCHER-WAH_WATCHER.title": "Wa Seherin!",
-  "WOWWATCHER-WAH_WATCHER.description": "Füge deiner Hand je eine zufällige Karte zum Annehmen von [gold]Zorn[/gold] und [gold]Ruhe[/gold] sowie [gold]Ansturm[/gold] und [gold]Blasphemie[/gold] hinzu.{IfUpgraded:show:\nAlle hinzugefügten Karten sind [gold]verbessert[/gold].|}"
+  "WOWWATCHER-WAH_WATCHER.description": "Füge deiner Hand je eine zufällige Karte zum Annehmen von [gold]Zorn[/gold] und [gold]Ruhe[/gold] sowie [gold]Eile[/gold] und [gold]Blasphemie[/gold] hinzu.{IfUpgraded:show:\nAlle hinzugefügten Karten sind [gold]verbessert[/gold].|}"
 }

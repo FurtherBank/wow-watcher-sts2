@@ -7,9 +7,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
-using Watcher.Code.Cards.Common;
-using Watcher.Code.Cards.Rare;
-using Watcher.Code.Cards.Uncommon;
+using WatcherMod;
 
 namespace WowWatcher;
 
@@ -24,14 +22,14 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
     public override string BetaPortraitPath => PortraitPath;
     protected override IEnumerable<string> ExtraRunAssetPaths => NWahVfx.AssetPaths;
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-        [HoverTipFactory.FromCard<Rushdown>(IsUpgraded), HoverTipFactory.FromCard<Blasphemy>(IsUpgraded)];
+        [HoverTipFactory.FromCard<WatcherRushdown>(IsUpgraded), HoverTipFactory.FromCard<WatcherBlasphemy>(IsUpgraded)];
 
     // Stance pools exclude starter cards and cards with Exhaust.
     // Conditional and delayed stance entries remain eligible.
     public static IReadOnlyList<CardModel> WrathCards =>
-        [ModelDb.Card<Indignation>(), ModelDb.Card<Tantrum>(), ModelDb.Card<SimmeringFury>()];
+        [ModelDb.Card<WatcherIndignation>(), ModelDb.Card<WatcherTantrum>(), ModelDb.Card<WatcherSimmeringFury>()];
     public static IReadOnlyList<CardModel> CalmCards =>
-        [ModelDb.Card<FearNoEvil>(), ModelDb.Card<InnerPeace>(), ModelDb.Card<Meditate>()];
+        [ModelDb.Card<WatcherFearNoEvil>(), ModelDb.Card<WatcherInnerPeace>(), ModelDb.Card<WatcherMeditate>()];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -40,7 +38,7 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
         var rng = Owner.RunState.Rng.CombatCardGeneration;
         CardModel[] templates =
         [WrathCards[rng.NextInt(WrathCards.Count)], CalmCards[rng.NextInt(CalmCards.Count)],
-         ModelDb.Card<Rushdown>(), ModelDb.Card<Blasphemy>()];
+         ModelDb.Card<WatcherRushdown>(), ModelDb.Card<WatcherBlasphemy>()];
         var cards = templates.Select(template => combat.CreateCard(template, Owner)).ToArray();
         foreach (var card in cards)
             if (IsUpgraded) CardCmd.Upgrade(card);

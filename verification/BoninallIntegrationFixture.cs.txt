@@ -1,0 +1,236 @@
+using System.Text.RegularExpressions;
+using MegaCrit.Sts2.Core.Nodes.Combat;
+using MegaCrit.Sts2.Core.Nodes.Cards;
+using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
+using MegaCrit.Sts2.Core.Combat.History.Entries;
+using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.TestSupport;
+using MegaCrit.Sts2.Core.Entities.CardRewardAlternatives;
+using Godot;
+using HarmonyLib;
+using MegaCrit.Sts2.Core.AutoSlay.Handlers.Screens;
+using MegaCrit.Sts2.Core.AutoSlay.Helpers;
+using MegaCrit.Sts2.Core.Bindings.MegaSpine;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Monsters;
+using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Nodes;
+using MegaCrit.Sts2.Core.Nodes.CommonUi;
+using MegaCrit.Sts2.Core.Nodes.Events;
+using MegaCrit.Sts2.Core.Nodes.Screens.CharacterSelect;
+using MegaCrit.Sts2.Core.Nodes.Screens.MainMenu;
+using MegaCrit.Sts2.Core.Nodes.Screens.Map;
+using MegaCrit.Sts2.Core.Random;
+using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.Saves;
+using MegaCrit.Sts2.Core.Settings;
+using MegaCrit.Sts2.Core.ValueProps;
+
+[ModInitializer(nameof(Initialize))]
+public static class WowVerify
+{
+ static bool started;
+ static SceneTree Tree => (SceneTree)Engine.GetMainLoop();
+ public static void Initialize() => new Harmony("WowVerify").Patch(AccessTools.Method(typeof(NMainMenu),"_Ready"),postfix:new HarmonyMethod(typeof(WowVerify),nameof(MenuReady)));
+ static void MenuReady(NMainMenu __instance) {if(started)return;started=true;Callable.From(()=>{_=Verify(__instance);}).CallDeferred();}
+ static async Task Verify(NMainMenu menu) {
+ try {
+ var role=ModelDb.AllCharacters.Single(c=>c.GetType().Name=="Fool");
+ foreach(string ftue in new[]{"accept_tutorials_ftue","map_select_ftue","can_play_cards_ftue","cannot_play_card_ftue","combat_rules_ftue","combat_reward_ftue","obtain_potion_ftue","shuffle_ftue"})SaveManager.Instance.MarkFtueAsComplete(ftue);
+            var select = menu.SubmenuStack.GetSubmenuType<NCharacterSelectScreen>();
+            select.InitializeSingleplayer();
+            menu.SubmenuStack.Push(select);
+            await Task.Delay(300);
+            var button = UiHelper.FindAll<NCharacterSelectButton>(select).Single(b => b.Character.Id == role.Id);
+
+            button.Select();
+            NGame.Instance!.DebugSeedOverride = "W0M2WBBLG61X";
+            await UiHelper.Click(select.GetNode<NConfirmButton>("ConfirmButton"));
+            await Until(() => RunManager.Instance.DebugOnlyGetState()?.Players.FirstOrDefault()?.Character.Id == role.Id, "embark");
+            await Until(() => NMapScreen.Instance?.IsOpen == true || AvailableOptions().Count > 0, "Neow or map");
+            for (int i = 0; i < 8 && NMapScreen.Instance?.IsOpen != true; i++)
+            {
+                await Until(() => NMapScreen.Instance?.IsOpen == true || AvailableOptions().Count > 0, "Neow choices");
+                if (NMapScreen.Instance?.IsOpen == true) break;
+                await UiHelper.Click(AvailableOptions()[0], 550);
+            }
+
+
+            var template=ModelDb.Card<WowWatcher.WahWatcher>();
+            Check("Boninall implementation loaded",AppDomain.CurrentDomain.GetAssemblies().Any(a=>a.GetType("WatcherMod.WatcherRushdown")!=null));
+            Check("stance pools exclude starters and exhaust",WowWatcher.WahWatcher.WrathCards.Concat(WowWatcher.WahWatcher.CalmCards).All(c=>c.Rarity!=CardRarity.Basic&&!c.Keywords.Contains(CardKeyword.Exhaust)));
+            Check("three cards in each stance pool",WowWatcher.WahWatcher.WrathCards.Count==3&&WowWatcher.WahWatcher.CalmCards.Count==3);
+            Check("rare rarity",template.Rarity==CardRarity.Rare);
+            Check("new art loads",template.Portrait.GetWidth()==1448 && template.Portrait.GetHeight()==1086);
+            Check("in Fool reward pool",ModelDb.CardPool<MegaCrit.Sts2.Core.Models.CardPools.FoolCardPool>().AllCards.Contains(template));
+            Check("Wah melody metadata",template.Tags.Contains(CardTag.Wah));
+            Check("localized title",template.Title=="哇 观者！");
+            Check("localized description",System.Text.RegularExpressions.Regex.Replace(template.GetDescriptionForPile(PileType.None),@"\[[^\]]*\]", "").Contains("将一张随机的愤怒、平静牌以及猛虎下山和渎神加入手牌。"));
+            Check("large preview uses native fallback",!template.HasPortrait);
+            var firstPreview=template.BigPortrait;
+            Check("large portrait valid before room transition",GodotObject.IsInstanceValid(firstPreview));
+            var previewNode=NCard.Create(template)!;
+            Tree.Root.AddChild(previewNode);
+            previewNode.UpdateVisuals(PileType.None,CardPreviewMode.Normal);
+            previewNode.QueueFree();
+            var fixturePlayer = RunManager.Instance.DebugOnlyGetState()!.Players[0];
+            for(int i=0;i<4;i++) await CardPileCmd.Add(fixturePlayer.RunState.CreateCard(template,fixturePlayer),PileType.Deck,skipVisuals:true);
+            using var cancellation=new CancellationTokenSource(TimeSpan.FromSeconds(60));
+            await new MapScreenHandler().HandleAsync(new Rng(114u),cancellation.Token);
+            await Until(()=>CombatManager.Instance.IsInProgress && fixturePlayer.PlayerCombatState?.Phase==PlayerTurnPhase.Play,"battle");
+            var player=fixturePlayer;
+            var combat=CombatManager.Instance.DebugOnlyGetState()!;
+            var hand=PileType.Hand.GetPile(player);
+            var discard=PileType.Discard.GetPile(player);
+            var state=player.PlayerCombatState!;
+            var history=CombatManager.Instance.History;
+            foreach(var enemy in combat.HittableEnemies) {enemy.SetMaxHpInternal(1000);enemy.SetCurrentHpInternal(1000);}
+            var fixtures=state.AllCards.OfType<WowWatcher.WahWatcher>().ToArray();
+            Check("deck fixtures",fixtures.Length==4);
+            for(int i=0;i<3;i++)
+            {
+                foreach(var c in hand.Cards.ToArray()) await CardPileCmd.Add(c,discard);
+                var card=fixtures[i];
+                if(i==1)CardCmd.Upgrade(card);
+                Check("upgrade description "+i,card.GetDescriptionForPile(PileType.None).Contains("加入的牌均已")== (i==1));
+                if(i==2)
+                    for(int j=0;j<9;j++)await CardPileCmd.AddGeneratedCardToCombat(combat.CreateCard<MegaCrit.Sts2.Core.Models.Cards.StrikeFool>(player),PileType.Hand,player);
+                await CardPileCmd.Add(card,hand);
+                await Until(()=>NPlayerHand.Instance?.GetCardHolder(card)?.CardNode!=null,"card displayed");
+                if(i<2 && DisplayServer.GetName()!="headless") {
+                    var holder=NPlayerHand.Instance!.GetCardHolder(card)!;
+                    holder.Call("OnFocus");
+                    await Task.Delay(1700);
+                    RenderingServer.ForceDraw();
+                    using var screenshot=Tree.Root.GetTexture().GetImage();
+                    Check("capture "+i,screenshot.SavePng("/path/to/checkout/verification/boninall-card-"+i+".png")==Error.Ok);
+                    holder.Call("OnUnfocus");
+                }
+                Check("zero energy",card.EnergyCost.GetWithModifiers(CostModifiers.All)==0);
+                var before=state.AllCards.ToHashSet();
+                Check("manual play accepted "+i,card.TryManualPlay(null));
+                await Until(()=>history.CardPlaysFinished.Any(e=>e.CardPlay.Card==card)&&card.Pile?.Type!=PileType.Play,"card resolved "+i);
+                var generated=state.AllCards.Where(c=>!before.Contains(c)).ToArray();
+                Check("four generated "+i,generated.Length==4);
+                Check("wrath choice "+i,WowWatcher.WahWatcher.WrathCards.Any(c=>c.Id==generated[0].Id));
+                Check("calm choice "+i,WowWatcher.WahWatcher.CalmCards.Any(c=>c.Id==generated[1].Id));
+                Check("no mantra card "+i,!generated.Any(c=>new[]{"WatcherProstrate","WatcherPray","WatcherWorship","WatcherDevotion"}.Contains(c.GetType().Name)));
+                Check("fixed pair "+i,generated[2].GetType().Name=="WatcherRushdown"&&generated[3].GetType().Name=="WatcherBlasphemy");
+                Check("upgrade status "+i,generated.All(c=>c.IsUpgraded==(i==1)));
+                Check("exhausts "+i,card.Pile?.Type==PileType.Exhaust);
+                Check("melody recognized "+i,MelodyCmd.PlayedWahThisTurn(player));
+                Check("hand capacity "+i,i==2 ? generated.Count(c=>c.Pile?.Type==PileType.Hand)==1&&generated.Count(c=>c.Pile?.Type==PileType.Discard)==3 : generated.All(c=>c.Pile?.Type==PileType.Hand));
+            }
+            foreach(var c in hand.Cards.ToArray()) await CardPileCmd.Add(c,discard);
+            var localeCard=fixtures[3];
+            CardCmd.Upgrade(localeCard);
+            await CardPileCmd.Add(localeCard,hand);
+            var titles = new Dictionary<string,string> {
+                ["zhs"]="哇 观者！",["zht"]="哇 觀者！",["eng"]="Wah Watcher!",["jpn"]="ワー ウォッチャー！",["kor"]="와 와쳐!",["deu"]="Wa Seherin!",["fra"]="Wah Gardienne !",["ita"]="Wah Watcher!",["pol"]="Wah Obserwatorka!",["rus"]="Вах Созерцающая!"
+            };
+            foreach(var (language,title) in titles) {
+                MegaCrit.Sts2.Core.Localization.LocManager.Instance.SetLanguage(language);
+                Check("locale title "+language,template.Title==title);
+                var localized=localeCard.GetDescriptionForPile(PileType.None);
+                Check("locale formatted "+language,!localized.Contains("IfUpgraded")&&!localized.Contains("WOWWATCHER")&&localized.Length>40);
+                var localeHolder=NPlayerHand.Instance!.GetCardHolder(localeCard)!;
+                localeHolder.CardNode!.UpdateVisuals(PileType.Hand,CardPreviewMode.Normal);
+                localeHolder.Call("OnFocus");
+                await Task.Delay(800);
+                if(DisplayServer.GetName()!="headless") {
+                    RenderingServer.ForceDraw();
+                    using var shot=Tree.Root.GetTexture().GetImage();
+                    Check("locale screenshot "+language,shot.SavePng("/tmp/wow-boninall-localization-screens/"+language+".png")==Error.Ok);
+                }
+                GD.Print("[WOW LOCALE] "+language+" "+template.Title+" "+localized.Replace("\n"," / "));
+                localeHolder.Call("OnUnfocus");
+            }
+            MegaCrit.Sts2.Core.Localization.LocManager.Instance.SetLanguage("zhs");
+            // Exercise the dependency's actual card behavior on a Fool, not only generation.
+            foreach(var c in hand.Cards.ToArray()) await CardPileCmd.Add(c,discard);
+            state.Energy=20;
+            for(int filler=0;filler<20;filler++)
+                await CardPileCmd.AddGeneratedCardToCombat(combat.CreateCard<MegaCrit.Sts2.Core.Models.Cards.StrikeFool>(player),PileType.Draw,player);
+            async Task PlayCard(CardModel card, Creature? target=null) {
+                if(hand.Cards.Count>6)
+                    foreach(var c in hand.Cards.ToArray()) await CardPileCmd.Add(c,discard);
+                await CardPileCmd.Add(card,hand);
+                Check("effect manual play "+card.GetType().Name,card.TryManualPlay(target));
+                await Until(()=>history.CardPlaysFinished.Any(e=>e.CardPlay.Card==card)&&card.Pile?.Type!=PileType.Play,"effect resolved "+card.GetType().Name);
+            }
+            CardModel NewEffect<T>() where T:CardModel => combat.CreateCard<T>(player);
+            var generatedRush=state.AllCards.OfType<WatcherMod.WatcherRushdown>().First(c=>!c.IsUpgraded);
+            await PlayCard(generatedRush);
+            Check("generated Rushdown applies on Fool",player.Creature.HasPower<WatcherMod.RushdownPower>());
+            await PlayCard(NewEffect<WatcherMod.WatcherInnerPeace>());
+            Check("Inner Peace enters Calm on Fool",player.Creature.HasPower<WatcherMod.Calm>());
+            var energyBeforeWrath=state.Energy;
+            var drawnBefore=history.Entries.OfType<CardDrawnEntry>().Count();
+            await PlayCard(NewEffect<WatcherMod.WatcherIndignation>());
+            Check("Indignation enters Wrath on Fool",player.Creature.HasPower<WatcherMod.Wrath>()&&!player.Creature.HasPower<WatcherMod.Calm>());
+            Check("leaving Calm grants two energy",state.Energy==energyBeforeWrath+1);
+            GD.Print("[WOW DEBUG] Rushdown draw delta="+(history.Entries.OfType<CardDrawnEntry>().Count()-drawnBefore)+" hand="+hand.Cards.Count+" pending="+typeof(WatcherMod.RushdownPower).GetField("PendingDraws",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic)!.GetValue(player.Creature.GetPower<WatcherMod.RushdownPower>()));
+            await Until(()=>history.Entries.OfType<CardDrawnEntry>().Count()>=drawnBefore+2,"Rushdown deferred draws finish");
+            Check("Rushdown draws two on entering Wrath",history.Entries.OfType<CardDrawnEntry>().Count()==drawnBefore+2);
+            var attackHelper=typeof(WatcherMod.Wrath).Assembly.GetType("WatcherMod.WatcherSimpleAHelper")!.GetMethod("IsTargetAttacking",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic)!;
+            var attackingEnemy=combat.HittableEnemies.FirstOrDefault(e=>(bool)attackHelper.Invoke(null,new object[]{e})!);
+            Check("attacking enemy available for conditional stance",attackingEnemy!=null);
+            var healthBefore=attackingEnemy!.CurrentHp;
+            await PlayCard(NewEffect<WatcherMod.WatcherFearNoEvil>(),attackingEnemy);
+            Check("Wrath amplifies an actual attack",healthBefore-attackingEnemy.CurrentHp>=16);
+            Check("Fear No Evil condition enters Calm on Fool",player.Creature.HasPower<WatcherMod.Calm>());
+            await PlayCard(NewEffect<WatcherMod.WatcherTantrum>(),attackingEnemy);
+            Check("Tantrum enters Wrath on Fool",player.Creature.HasPower<WatcherMod.Wrath>());
+            await PlayCard(NewEffect<WatcherMod.WatcherSimmeringFury>());
+            Check("Simmering Fury schedules next-turn stance",player.Creature.HasPower<WatcherMod.SimmeringFuryPower>());
+            foreach(var c in discard.Cards.ToArray()) await CardPileCmd.Add(c,PileType.Exhaust.GetPile(player));
+            var turnBeforeMeditate=state.TurnNumber;
+            var calmEntriesBefore=history.Entries.OfType<PowerReceivedEntry>().Count(e=>e.Power is WatcherMod.Calm);
+            await PlayCard(NewEffect<WatcherMod.WatcherMeditate>());
+            await Until(()=>state.TurnNumber>turnBeforeMeditate&&state.Phase==PlayerTurnPhase.Play,"Meditate ends turn and next turn starts");
+            Check("Meditate enters Calm before ending turn",history.Entries.OfType<PowerReceivedEntry>().Count(e=>e.Power is WatcherMod.Calm)>calmEntriesBefore);
+            Check("delayed Wrath resolves on Fool",player.Creature.HasPower<WatcherMod.Wrath>()&&!player.Creature.HasPower<WatcherMod.SimmeringFuryPower>());
+            state.Energy=10;
+            var generatedBlasphemy=state.AllCards.OfType<WatcherMod.WatcherBlasphemy>().First(c=>!c.IsUpgraded);
+            var energyBeforeDivinity=state.Energy;
+            await PlayCard(generatedBlasphemy);
+            Check("generated Blasphemy enters Divinity on Fool",player.Creature.HasPower<WatcherMod.Divinity>()&&!player.Creature.HasPower<WatcherMod.Wrath>());
+            Check("Divinity grants three energy",state.Energy==energyBeforeDivinity+2);
+            Check("Blasphemy death power applies",player.Creature.HasPower<WatcherMod.EndTurnDeathPower>());
+            healthBefore=attackingEnemy.CurrentHp;
+            await PlayCard(NewEffect<WatcherMod.WatcherFearNoEvil>(),attackingEnemy);
+            Check("Divinity amplifies an actual attack",healthBefore-attackingEnemy.CurrentHp>=24);
+            RunManager.Instance.ActionQueueSynchronizer.RequestEnqueue(new MegaCrit.Sts2.Core.GameActions.EndPlayerTurnAction(player,state.TurnNumber));
+            await Until(()=>!player.Creature.IsAlive,"Blasphemy next-turn death resolves on Fool");
+            GD.Print("[WOW PASS] ALL CHECKS PASSED");
+            Tree.Quit();
+
+ } catch(Exception ex) {GD.PrintErr("[WOW FAIL] "+ex);Tree.Quit(1);}
+ }
+    private static List<NEventOptionButton> AvailableOptions() =>
+        UiHelper.FindAll<NEventOptionButton>(Tree.Root).Where(b => b.IsVisibleInTree() && !b.Option.IsLocked).ToList();
+
+    private static void Check(string name, bool success)
+    {
+        if (!success) throw new InvalidOperationException(name);
+        GD.Print("[WOW PASS] " + name);
+    }
+
+    private static async Task Until(Func<bool> predicate, string phase)
+    {
+        var expires = Time.GetTicksMsec() + 60000;
+        while (!predicate())
+        {
+            if (Time.GetTicksMsec() > expires) throw new TimeoutException(phase);
+            await Tree.ToSignal(Tree, SceneTree.SignalName.ProcessFrame);
+        }
+        GD.Print("[WOW PASS] " + phase);
+    }
+}
