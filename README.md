@@ -18,17 +18,17 @@
 
 **升级后，生成的五张牌全部升级。** 生成牌保留自身费用；手牌已满时，多出的牌进入弃牌堆。支持简体中文、繁体中文和英文。
 
-随机范围包含初始牌、条件触发及延迟触发的姿态牌。
+愤怒和平静的随机池排除观者初始牌与带消耗的姿态牌；条件触发及延迟触发的姿态牌仍可生成。真言池和固定生成的两张牌不受此限制。
 
 | 类别 | 随机范围 |
 | --- | --- |
-| 愤怒 | Eruption、Crescendo、Indignation、Tantrum、SimmeringFury |
-| 平静 | Vigilance、Tranquility、FearNoEvil、InnerPeace、Meditate |
+| 愤怒 | Indignation（义愤）、Tantrum（发脾气）、SimmeringFury（煞怒） |
+| 平静 | FearNoEvil（不惧邪恶）、InnerPeace（内心平静）、Meditate（冥想） |
 | 真言 | Prostrate、Pray、Worship、Devotion |
 
 ## 下载与安装
 
-从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.1.zip`。
+从 [Releases](https://github.com/FurtherBank/wow-watcher-sts2/releases) 下载 `WowWatcher-0.1.2.zip`。
 
 使用前请切换到游戏测试分支，并安装、启用以下前置 Mod。
 
@@ -71,7 +71,7 @@ macOS 默认使用当前用户的标准 Steam 安装目录。其他位置或平�
 
 若 .NET 不在 PATH 中，可设置 `DOTNET_BIN` 为本机 `dotnet` 可执行文件的路径。Windows 可使用 Git Bash 或 WSL 执行脚本，并安装相应环境下可用的 .NET 和 Python。
 
-输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.1.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
+输出为 `dist/WowWatcher/` 和 `dist/WowWatcher-0.1.2.zip`。ZIP 内只有运行所需的 DLL、PCK 和清单。
 
 ## 卡图与资源
 
@@ -102,4 +102,4 @@ godot --headless --path . --script scripts/import_art.gd
 - 打出后消耗，原生旋律系统识别为「哇」。
 - 手牌接近满额时，溢出的牌进入弃牌堆。
 
-结果见 [功能验证](verification/results.txt)、[卡图验证](verification/art-results.txt)。测试进程退出码为 0；退出时出现 Godot 渲染资源释放提示，未影响上述断言通过。当前仓库收录验证结果和截图，未提供自动执行这些游戏场景的测试工具。
+结果见 [功能验证](verification/results.txt)、[卡图验证](verification/art-results.txt)、[v0.1.2 卡池验证](verification/pool-results.txt)。测试进程退出码为 0；退出时出现 Godot 渲染资源释放提示，未影响上述断言通过。当前仓库收录验证结果和截图，未提供自动执行这些游戏场景的测试工具。

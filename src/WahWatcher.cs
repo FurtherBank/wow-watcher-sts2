@@ -7,7 +7,6 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
-using Watcher.Code.Cards.Basic;
 using Watcher.Code.Cards.Common;
 using Watcher.Code.Cards.Rare;
 using Watcher.Code.Cards.Uncommon;
@@ -26,13 +25,12 @@ public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
         [HoverTipFactory.FromCard<Rushdown>(IsUpgraded), HoverTipFactory.FromCard<Blasphemy>(IsUpgraded)];
 
-    // Include conditional and delayed stance entries, as well as starter cards.
+    // Stance pools exclude starter cards and cards with Exhaust.
+    // Conditional and delayed stance entries remain eligible.
     public static IReadOnlyList<CardModel> WrathCards =>
-        [ModelDb.Card<Eruption>(), ModelDb.Card<Crescendo>(), ModelDb.Card<Indignation>(),
-         ModelDb.Card<Tantrum>(), ModelDb.Card<SimmeringFury>()];
+        [ModelDb.Card<Indignation>(), ModelDb.Card<Tantrum>(), ModelDb.Card<SimmeringFury>()];
     public static IReadOnlyList<CardModel> CalmCards =>
-        [ModelDb.Card<Vigilance>(), ModelDb.Card<Tranquility>(), ModelDb.Card<FearNoEvil>(),
-         ModelDb.Card<InnerPeace>(), ModelDb.Card<Meditate>()];
+        [ModelDb.Card<FearNoEvil>(), ModelDb.Card<InnerPeace>(), ModelDb.Card<Meditate>()];
     public static IReadOnlyList<CardModel> MantraCards =>
         [ModelDb.Card<Prostrate>(), ModelDb.Card<Pray>(), ModelDb.Card<Worship>(), ModelDb.Card<Devotion>()];
 
