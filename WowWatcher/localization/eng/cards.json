@@ -1,0 +1,4 @@
+{
+  "WOWWATCHER-WAH_WATCHER.title": "Wah! Watcher",
+  "WOWWATCHER-WAH_WATCHER.description": "Add a random [gold]Wrath[/gold] card, [gold]Calm[/gold] card, and [gold]Mantra[/gold] card, plus [gold]Rushdown[/gold] and [gold]Blasphemy[/gold], to your hand.{IfUpgraded:show:\n[gold]Upgrade[/gold] all generated cards.|}"
+}

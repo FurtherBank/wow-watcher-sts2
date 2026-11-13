@@ -1,0 +1,21 @@
+{
+  "id": "WowWatcher",
+  "name": "哇！观者 / Wah! Watcher",
+  "author": "FurtherBank",
+  "description": "为测试版愚者添加一张带哇旋律标签的观者联动牌。Requires the beta branch, BaseLib and The Watcher.",
+  "version": "0.1.1",
+  "has_pck": true,
+  "has_dll": true,
+  "min_game_version": "0.113.0",
+  "dependencies": [
+    {
+      "id": "BaseLib",
+      "min_version": "3.4.8"
+    },
+    {
+      "id": "Watcher",
+      "min_version": "1.5.16"
+    }
+  ],
+  "affects_gameplay": true
+}

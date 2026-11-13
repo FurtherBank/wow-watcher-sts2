@@ -1,0 +1,54 @@
+using BaseLib.Abstracts;
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
+using Watcher.Code.Cards.Basic;
+using Watcher.Code.Cards.Common;
+using Watcher.Code.Cards.Rare;
+using Watcher.Code.Cards.Uncommon;
+
+namespace WowWatcher;
+
+[Pool(typeof(FoolCardPool))]
+public sealed class WahWatcher() : CustomCardModel(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
+{
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Wah];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    public override string PortraitPath => "res://WowWatcher/images/wah_watcher.res";
+    public override string BetaPortraitPath => PortraitPath;
+    public override string? CustomPortraitPath => PortraitPath;
+    protected override IEnumerable<string> ExtraRunAssetPaths => NWahVfx.AssetPaths;
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+        [HoverTipFactory.FromCard<Rushdown>(IsUpgraded), HoverTipFactory.FromCard<Blasphemy>(IsUpgraded)];
+
+    // Include conditional and delayed stance entries, as well as starter cards.
+    public static IReadOnlyList<CardModel> WrathCards =>
+        [ModelDb.Card<Eruption>(), ModelDb.Card<Crescendo>(), ModelDb.Card<Indignation>(),
+         ModelDb.Card<Tantrum>(), ModelDb.Card<SimmeringFury>()];
+    public static IReadOnlyList<CardModel> CalmCards =>
+        [ModelDb.Card<Vigilance>(), ModelDb.Card<Tranquility>(), ModelDb.Card<FearNoEvil>(),
+         ModelDb.Card<InnerPeace>(), ModelDb.Card<Meditate>()];
+    public static IReadOnlyList<CardModel> MantraCards =>
+        [ModelDb.Card<Prostrate>(), ModelDb.Card<Pray>(), ModelDb.Card<Worship>(), ModelDb.Card<Devotion>()];
+
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        if (CombatState is not { } combat) return;
+        await MelodyCmd.PlayMelodyVfx(Owner.Creature, CardTag.Wah);
+        var rng = Owner.RunState.Rng.CombatCardGeneration;
+        CardModel[] templates =
+        [WrathCards[rng.NextInt(WrathCards.Count)], CalmCards[rng.NextInt(CalmCards.Count)],
+         MantraCards[rng.NextInt(MantraCards.Count)], ModelDb.Card<Rushdown>(), ModelDb.Card<Blasphemy>()];
+        var cards = templates.Select(template => combat.CreateCard(template, Owner)).ToArray();
+        foreach (var card in cards)
+            if (IsUpgraded) CardCmd.Upgrade(card);
+        await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, Owner);
+    }
+
+    protected override void OnUpgrade() { }
+}

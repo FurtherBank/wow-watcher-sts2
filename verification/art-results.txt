@@ -1,0 +1,57 @@
+STS2 v0.113.0 / WowWatcher 0.1.1 / Watcher 1.5.16 / BaseLib 3.4.8
+Visible isolated Fool run; exit code 0
+[WOW PASS] embark
+[WOW PASS] Neow or map
+[WOW PASS] Neow choices
+[WOW PASS] Neow choices
+[WOW PASS] rare rarity
+[WOW PASS] new art loads
+[WOW PASS] in Fool reward pool
+[WOW PASS] Wah melody metadata
+[WOW PASS] localized title
+[WOW PASS] localized description
+[WOW PASS] battle
+[WOW PASS] deck fixtures
+[WOW PASS] card displayed
+[WOW PASS] capture 0
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 0
+[WOW PASS] card resolved 0
+[WOW PASS] five generated 0
+[WOW PASS] wrath choice 0
+[WOW PASS] calm choice 0
+[WOW PASS] mantra choice 0
+[WOW PASS] fixed pair 0
+[WOW PASS] upgrade status 0
+[WOW PASS] exhausts 0
+[WOW PASS] melody recognized 0
+[WOW PASS] hand capacity 0
+[WOW PASS] card displayed
+[WOW PASS] capture 1
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 1
+[WOW PASS] card resolved 1
+[WOW PASS] five generated 1
+[WOW PASS] wrath choice 1
+[WOW PASS] calm choice 1
+[WOW PASS] mantra choice 1
+[WOW PASS] fixed pair 1
+[WOW PASS] upgrade status 1
+[WOW PASS] exhausts 1
+[WOW PASS] melody recognized 1
+[WOW PASS] hand capacity 1
+[WOW PASS] card displayed
+[WOW PASS] zero energy
+[WOW PASS] manual play accepted 2
+[WOW PASS] card resolved 2
+[WOW PASS] five generated 2
+[WOW PASS] wrath choice 2
+[WOW PASS] calm choice 2
+[WOW PASS] mantra choice 2
+[WOW PASS] fixed pair 2
+[WOW PASS] upgrade status 2
+[WOW PASS] exhausts 2
+[WOW PASS] melody recognized 2
+[WOW PASS] hand capacity 2
+[WOW PASS] ALL CHECKS PASSED
+Native textures preserved: 1448 x 1086 PNG -> Godot ImageTexture resource.
